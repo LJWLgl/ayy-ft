@@ -1,0 +1,45 @@
+{
+  "pages":[
+    "pages/test/test",
+    "pages/test/item-detail/item-detail",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#00BFFF",
+    "navigationBarTitleText": "爱易园",
+    "navigationBarTextStyle":"#eee333"
+  },
+  "tabBar": {
+    "selectedColor":"#ddd",
+    "borderStyle":"ligit",
+    "list": [
+      {
+        "iconPath": "image/yx.png",
+        "selectedIconPath": "image/sx.png",
+        "pagePath": "pages/index/index",
+        "text": "好货"
+      },
+      {
+        "iconPath": "image/yx.png",
+        "selectedIconPath": "image/sx.png",
+        "pagePath": "pages/test/test",
+        "text": "捐赠"
+      },
+      {
+        "iconPath": "image/yx.png",
+        "selectedIconPath": "image/sx.png",
+        "pagePath": "pages/logs/logs",
+        "text": "发布"
+      },
+      {
+        "iconPath": "image/yx.png",
+        "selectedIconPath": "image/sx.png",
+        "pagePath": "pages/logs/logs",
+        "text": "我的"
+      }
+    ]
+  },
+  "debug": true
+}

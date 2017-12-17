@@ -1,0 +1,3 @@
+<!--pages/test/item-detail/item-detail.wxml-->
+<text>pages/test/item-detail/item-detail.wxml</text>
+<view>{{goods_id}}</view>
