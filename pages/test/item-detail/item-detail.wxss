@@ -1,15 +1,131 @@
 /* pages/test/item-detail/item-detail.wxss */
 .container {
-  padding: 0rpx 0rpx;
+  padding: 0 32rpx;
 }
-.swiper {
-  height: 400rpx;
+.container-ext-info {
+  display: flex;
+  justify-content: space-around;
+  color: #888;
+  font-size: 28rpx;
+}
+.fix-function-container {
+  width: 100%;
+  position:fixed;
+}
+.btn-container {
+  display: flex;
+  height: 70rpx;
+  width: 100%;
+  text-align: center;
+  font-size: 32rpx;
+  line-height: 70rpx;
+}
+.btn-like {
+  background-color: #FF0000;
+  flex: 2;
+  color: #FFF;
+}
+.btn-contact {
+  background-color: #FF7F50;
+  flex: 3;
+  color: #FFF;
+}
+.container-user {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 24rpx 0rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.info-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  margin-right: 16px;
+}
+.avatar {
+    width: 88rpx;
+    height: 88rpx;
+    border-radius: 50%;
+}
+.container-desc {
+  position: relative;
+}
+
+.container-user-ext-info {
+  display: flex;
+  flex-flow: column;
+}
+.username {
+  font-size: 32rpx;
+}
+
+.address {
+  font-size: 10px;
+  color: #666;
+}
+
+.container-price {
+  margin-top: 32rpx;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: baseline;
+}
+
+.txt-real-price {
+  color: #FF0000;
+}
+
+.txt-real-price::before,
+.txt-origin-price::before {
+  content: "￥";
+}
+
+.txt-real-price::before {
+  font-size: 12px;
+}
+
+.txt-origin-price::before {
+  font-size: 10px;
+}
+
+.txt-origin-price {
+  margin-left: 12rpx;
+  font-size: 10px;
+  color: #ccc;
+  text-decoration: line-through;
+}
+
+.container-desc {
+  margin-top: 32rpx;
+  font-size: 14px;
+  color: #444;
+}
+
+.middle {
+  margin-top: 16rpx;
+}
+
+.slide-image {
   width: 100%;
 }
-.swiper image {
-  height: 100%;
-  width: 100%;
+
+.scroll {
+  padding-bottom: 70rpx;
 }
-.top {
-  width: 100%;
+
+.bottom {
+  border-top: 1px solid #eee; 
+  padding: 16rpx 0;
+}
+
+.container-ext-info > .content {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.content .iconfont {
+  margin-right: 8rpx;
 }

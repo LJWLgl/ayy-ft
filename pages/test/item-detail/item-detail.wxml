@@ -1,35 +1,55 @@
 <!--pages/test/item-detail/item-detail.wxml-->
-<view>{{goods_id}}</view>
-<view class="container">
-  <view class="top">
-    <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">    
-      <block wx:for="{{movies}}" wx:for-index="index">    
-        <swiper-item>    
-          <image src="{{item.url}}" class="slide-image" mode="aspectFill"/>    
-        </swiper-item>    
-      </block>    
-    </swiper> 
-  </view>
-  <view class="middle">
-    <view class="container-desc">
-      <view class="txt-goods-desc">安踏球鞋，九成新</view>
+<view>
+  <scroll-view class='scroll'>
+    <view>{{goods_id}}</view>
+    <view class="container">
+      <view class="top">
+        <view class="container-user">
+          <view class='info-container'>
+            <image class="avatar" src="http://img02.tooopen.com/images/20141231/sy_78327074576.jpg"></image>
+          </view>
+          <view class="container-user-ext-info">
+            <text class="username">南轩</text>
+            <text class="address">今天发布于安徽芜湖</text>
+          </view>
+        </view>
+        <view class="container-price">
+          <view class="txt-real-price">
+            <text>210.00</text>
+          </view>
+          <view class="txt-origin-price">
+            <text>1100</text>
+          </view>
+        </view>
+        <view class="container-desc">
+          <view class="txt-goods-desc">
+            <text>安踏球鞋，九成新</text>
+          </view>
+        </view>
+      </view>
+      <view class="middle">
+        <block wx:for="{{imgalist}}" wx:for-index="index">
+          <image src="{{item}}" class="slide-image" mode="aspectFill" bindtap="previewImage" />
+        </block>
+      </view>
+      <view class="bottom">
+        <view class="container-ext-info">
+          <view class='content'>
+            <text class="iconfont icon-liulan1"></text>
+            <text>30人浏览</text>
+          </view>
+          <view class='content'>
+            <text class="iconfont icon-pinglun1"></text>
+            <text>30人评论</text>
+          </view>
+        </view>
+      </view>
     </view>
-    <view class="container-price">
-      <view class="txt-price">￥210.00</view>
-      <view class="txt-lookcount">30人浏览</view>
-    </view>
-    <view class="container-tags">
-      <view class="tag">热卖，居家生活</view>
-    </view>
-  </view>
-  <view class="bottom">
-    <view class="container-comments">
-      <view class="txt-comment">评论</view>
-    </view>
-  </view>
+  </scroll-view>
   <view class="fix-function-container">
-    <view class="btn-like">收藏</view>
-    <view class="btn-contact">联系卖家</view>
+    <view class="btn-container">
+      <view class="btn-like btn-item">收藏</view>
+      <view class="btn-contact btn-item">联系卖家</view>
+    </view>
   </view>
 </view>
-
