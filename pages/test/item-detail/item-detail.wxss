@@ -1,1 +1,15 @@
 /* pages/test/item-detail/item-detail.wxss */
+.container {
+  padding: 0rpx 0rpx;
+}
+.swiper {
+  height: 400rpx;
+  width: 100%;
+}
+.swiper image {
+  height: 100%;
+  width: 100%;
+}
+.top {
+  width: 100%;
+}

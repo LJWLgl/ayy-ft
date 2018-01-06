@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view class="main">
+  <view class="data">
+    <block wx:for-items="{{imageList}}" wx:for-item="image" wx:key="*item">
+      <image class="image" src="{{image}}" mode="aspectFit"></image>
+      imageURL: <text>{{image}}</text>
+    </block>
+  </view>
+  <button bindtap='didPressChooesImage'>上传图片</button>
+</view>

@@ -1,8 +1,10 @@
 {
   "pages":[
     "pages/test/test",
+    "pages/depoly/depoly",
     "pages/test/item-detail/item-detail",
     "pages/index/index",
+    "pages/user/user",
     "pages/logs/logs"
   ],
   "window":{
@@ -30,13 +32,13 @@
       {
         "iconPath": "image/yx.png",
         "selectedIconPath": "image/sx.png",
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/depoly/depoly",
         "text": "发布"
       },
       {
         "iconPath": "image/yx.png",
         "selectedIconPath": "image/sx.png",
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/user/user",
         "text": "我的"
       }
     ]

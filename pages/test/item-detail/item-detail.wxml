@@ -1,3 +1,35 @@
 <!--pages/test/item-detail/item-detail.wxml-->
-<text>pages/test/item-detail/item-detail.wxml</text>
 <view>{{goods_id}}</view>
+<view class="container">
+  <view class="top">
+    <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">    
+      <block wx:for="{{movies}}" wx:for-index="index">    
+        <swiper-item>    
+          <image src="{{item.url}}" class="slide-image" mode="aspectFill"/>    
+        </swiper-item>    
+      </block>    
+    </swiper> 
+  </view>
+  <view class="middle">
+    <view class="container-desc">
+      <view class="txt-goods-desc">安踏球鞋，九成新</view>
+    </view>
+    <view class="container-price">
+      <view class="txt-price">￥210.00</view>
+      <view class="txt-lookcount">30人浏览</view>
+    </view>
+    <view class="container-tags">
+      <view class="tag">热卖，居家生活</view>
+    </view>
+  </view>
+  <view class="bottom">
+    <view class="container-comments">
+      <view class="txt-comment">评论</view>
+    </view>
+  </view>
+  <view class="fix-function-container">
+    <view class="btn-like">收藏</view>
+    <view class="btn-contact">联系卖家</view>
+  </view>
+</view>
+
