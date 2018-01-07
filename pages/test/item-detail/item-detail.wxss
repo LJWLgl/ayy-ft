@@ -12,30 +12,12 @@
   width: 100%;
   position:fixed;
 }
-.btn-container {
-  display: flex;
-  height: 70rpx;
-  width: 100%;
-  text-align: center;
-  font-size: 32rpx;
-  line-height: 70rpx;
-}
-.btn-like {
-  background-color: #FF0000;
-  flex: 2;
-  color: #FFF;
-}
-.btn-contact {
-  background-color: #FF7F50;
-  flex: 3;
-  color: #FFF;
-}
 .container-user {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   padding: 24rpx 0rpx;
-  border-bottom: 1px solid #eee;
+  border-bottom: 4rpx solid #eee;
 }
 
 .info-container {
@@ -51,6 +33,10 @@
 }
 .container-desc {
   position: relative;
+}
+
+.txt-goods-desc {
+  font-size: 40rpx;
 }
 
 .container-user-ext-info {
@@ -116,7 +102,6 @@
 }
 
 .bottom {
-  border-top: 1px solid #eee; 
   padding: 16rpx 0;
 }
 
@@ -126,6 +111,106 @@
   align-items: center;
 }
 
-.content .iconfont {
+.content .small-icon {
   margin-right: 8rpx;
+}
+
+.comment {
+  width: 100%;
+  padding: 0 0;
+}
+.comment > .title {
+  font-size: 32rpx;
+}
+
+.area-item {
+  border-top: 1px solid #eee;
+  padding: 16rpx 0px;
+}
+
+.item-avatar {
+  margin-right: 12rpx;
+}
+
+.item-avatar-image {
+  width: 52rpx;
+  height: 52rpx;
+  border-radius: 50%;
+}
+
+.item-comment-info {
+  display: flex;
+  flex-flow: column;
+  color: #444;
+}
+
+.item-comment-info > .username {
+  font-size: 32rpx;
+}
+
+.item-comment-info > .desc {
+  font-size: 36rpx;
+  color: #444;
+}
+
+.item-comment-info > .item-date {
+  color: #888;
+  font-size: 28rpx;
+}
+
+.arem-item-base {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.btn-container {
+  display: flex;
+  height: 48px;
+  width: 100%;
+  text-align: center;
+  background-color: #fff;
+  border-top: 1px solid #eee;
+  box-shadow: 0 1rpx 1rpx #eee;
+}
+
+.btn-container .btn-lists {
+  height: 100%;
+  flex: 3;
+  font-size: 24rpx;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+
+.btn-container .contact {
+  flex: 2;
+  color: #fff;
+  font-size: 32rpx;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.btn-contact {
+  width: 100px;
+  height: 24px;
+  background-color: #FF0000;
+  margin: auto auto; 
+  line-height: 24px;
+  border-radius: 2px;
+}
+
+.btn {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  font-size: 28rpx;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: inline;
 }

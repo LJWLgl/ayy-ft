@@ -6,6 +6,20 @@ Page({
       'http://img04.tooopen.com/images/20130617/tooopen_21241404.jpg',
       'http://img04.tooopen.com/images/20130701/tooopen_20083555.jpg',
       'http://img02.tooopen.com/images/20141231/sy_78327074576.jpg'
+    ],
+    comments: [
+      { 
+        avatar:'http://img04.tooopen.com/images/20130712/tooopen_17270713.jpg',
+        username:'司机峰',
+        content:'几成新',
+        date:'2017/12/31 08:23:00'
+      },
+      {
+        avatar: 'http://img04.tooopen.com/images/20130712/tooopen_17270713.jpg',
+        username: '司机峰',
+        content: '几成新',
+        date: '2017/12/31 08:23:00'
+      }
     ]
   },
   onLoad: function (options) {

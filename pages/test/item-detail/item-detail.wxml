@@ -35,21 +35,62 @@
       <view class="bottom">
         <view class="container-ext-info">
           <view class='content'>
-            <text class="iconfont icon-liulan1"></text>
+            <text class="small-icon icon-attention-light"></text>
             <text>30人浏览</text>
           </view>
           <view class='content'>
-            <text class="iconfont icon-pinglun1"></text>
+            <text class="small-icon icon-comment"></text>
             <text>30人评论</text>
           </view>
+        </view>
+      </view>
+      <view class="comment">
+        <view class="title">
+          <text>评论</text>
+        </view>
+        <view class="area">
+          <block wx:for="{{comments}}" wx:for-index="index">
+            <view class="area-item">
+              <view class="arem-item-base">
+                <view class="item-avatar">
+                  <image class="item-avatar-image" src="{{item.avatar}}"></image>
+                </view>
+                <view class="item-comment-info">
+                  <text class="username">{{item.username}}</text>
+                  <text class="desc">{{item.content}}</text>
+                  <text class="item-date">{{item.date}}</text>
+                </view>
+              </view>
+            </view>
+          </block>
         </view>
       </view>
     </view>
   </scroll-view>
   <view class="fix-function-container">
+    <view>
+      <input placeholder="这是一个可以自动聚焦的input" auto-focus/>
+    </view>
     <view class="btn-container">
-      <view class="btn-like btn-item">收藏</view>
-      <view class="btn-contact btn-item">联系卖家</view>
+      <view class="btn-lists hide">
+        <view class='btn'>
+          <text class="middle-icon icon-like"></text>
+          <text>喜欢</text>
+        </view>
+        <view class='btn'>
+          <text class="middle-icon icon-favor"></text>
+          <text>收藏</text>
+        </view>
+        <view class='btn'>
+          <text class="middle-icon icon-comment"></text>
+          <text>留言</text>
+        </view>
+      </view>
+      <view class="contact">
+        <view class="btn-contact">
+          <text>联系卖家</text>
+        </view>
+      </view>
     </view>
   </view>
 </view>
