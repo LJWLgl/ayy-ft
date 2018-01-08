@@ -8,10 +8,6 @@
   color: #888;
   font-size: 28rpx;
 }
-.fix-function-container {
-  width: 100%;
-  position:fixed;
-}
 .container-user {
   display: flex;
   flex-flow: row nowrap;
@@ -27,9 +23,9 @@
   margin-right: 16px;
 }
 .avatar {
-    width: 88rpx;
-    height: 88rpx;
-    border-radius: 50%;
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 50%;
 }
 .container-desc {
   position: relative;
@@ -171,9 +167,10 @@
   background-color: #fff;
   border-top: 1px solid #eee;
   box-shadow: 0 1rpx 1rpx #eee;
+  align-items: center;
 }
 
-.btn-container .btn-lists {
+.btn-lists {
   height: 100%;
   flex: 3;
   font-size: 24rpx;
@@ -182,7 +179,7 @@
   justify-content: space-around;
 }
 
-.btn-container .contact {
+.contact {
   flex: 2;
   color: #fff;
   font-size: 32rpx;
@@ -213,4 +210,16 @@
 
 .show {
   display: inline;
+}
+
+.input-container {
+  width: 100%;
+}
+
+.input-comment {
+  text-align: left;
+  color: #888;
+  font-size: 14px;
+  padding: 0 10px;
+  height: 48px;
 }

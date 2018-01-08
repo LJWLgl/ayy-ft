@@ -68,10 +68,10 @@
     </view>
   </scroll-view>
   <view class="fix-function-container">
-    <view>
-      <input placeholder="这是一个可以自动聚焦的input" auto-focus/>
-    </view>
     <view class="btn-container">
+      <view class="input-container {{isShow}}">
+        <input class="input-comment" confirm-type="send" placeholder="请在这里输入评论"/>
+      </view>
       <view class="btn-lists hide">
         <view class='btn'>
           <text class="middle-icon icon-like"></text>
@@ -86,8 +86,8 @@
           <text>留言</text>
         </view>
       </view>
-      <view class="contact">
-        <view class="btn-contact">
+      <view class="contact hide">
+        <view class="btn-contact hide">
           <text>联系卖家</text>
         </view>
       </view>
