@@ -1,6 +1,6 @@
 <!--pages/test/item-detail/item-detail.wxml-->
 <view>
-  <scroll-view class='scroll'>
+  <scroll-view class="scroll">
     <view>{{goods_id}}</view>
     <view class="container">
       <view class="top">
@@ -69,25 +69,25 @@
   </scroll-view>
   <view class="fix-function-container">
     <view class="btn-container">
-      <view class="input-container {{isShow}}">
-        <input class="input-comment" confirm-type="send" placeholder="请在这里输入评论"/>
+      <view class="input-container {{isShow == 1 ? 'show':'hide'}}">
+        <input class="input-comment" confirm-type="send" value="{{inputValue}}"     bindconfirm="sendClick" bindblur="unfocusInput" placeholder="请在这里输入评论"/>
       </view>
-      <view class="btn-lists hide">
-        <view class='btn'>
-          <text class="middle-icon icon-like"></text>
+      <view class="btn-lists {{isShow == 1 ? 'hide':'show'}}">
+        <view class='btn' bindtap="likeClick">
+          <text class="middle-icon {{likeClass % 2==0?'icon-like':'icon-like-fill'}}"></text>
           <text>喜欢</text>
         </view>
         <view class='btn'>
-          <text class="middle-icon icon-favor"></text>
+          <text class="middle-icon {{collectClass % 2==0?'icon-favor':'icon-favor-fill'}}" bindtap="collectClick"></text>
           <text>收藏</text>
         </view>
-        <view class='btn'>
+        <view class='btn' bindtap='commentClick'>
           <text class="middle-icon icon-comment"></text>
           <text>留言</text>
         </view>
       </view>
-      <view class="contact hide">
-        <view class="btn-contact hide">
+      <view class="contact {{isShow == 1 ? 'hide':'show'}}">
+        <view class="btn-contact">
           <text>联系卖家</text>
         </view>
       </view>

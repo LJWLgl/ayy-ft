@@ -38,13 +38,13 @@
 
 .icon-favor:before {content: "\e64c";}
 
-.icon-favor-fill:before {content: "\e64b";}
+.icon-favor-fill:before {content: "\e64b";color: #f00}
 
 .icon-add:before {content: "\e767";}
 
 .icon-like:before {content: "\e669";}
 
-.icon-like-fill:before {content: "\e668";}
+.icon-like-fill:before {content: "\e668"; color: #f00}
 
 .icon-comment:before {content: "\e667"}
 

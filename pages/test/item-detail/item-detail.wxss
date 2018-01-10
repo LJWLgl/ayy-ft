@@ -209,7 +209,7 @@
 }
 
 .show {
-  display: inline;
+  display: flex;
 }
 
 .input-container {
@@ -218,8 +218,8 @@
 
 .input-comment {
   text-align: left;
+  height: 48px;
+  padding: 0 10px;
   color: #888;
   font-size: 14px;
-  padding: 0 10px;
-  height: 48px;
 }
