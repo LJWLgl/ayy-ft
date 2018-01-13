@@ -1,9 +1,8 @@
 {
   "pages":[
-    "pages/depoly/depoly",
-    "pages/test/test",
-    "pages/test/item-detail/item-detail",
     "pages/index/index",
+    "pages/depoly/depoly",
+    "pages/index/item-detail/item-detail",
     "pages/user/user",
     "pages/logs/logs"
   ],
@@ -26,7 +25,7 @@
       {
         "iconPath": "image/yx.png",
         "selectedIconPath": "image/sx.png",
-        "pagePath": "pages/test/test",
+        "pagePath": "pages/index/index",
         "text": "捐赠"
       },
       {

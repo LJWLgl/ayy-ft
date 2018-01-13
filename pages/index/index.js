@@ -1,75 +1,64 @@
-//index.js
-//获取应用实例
-const app = getApp()
-
 Page({
-  data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    array: [{
-      message: 'foo',
-    }, {
-      message: 'bar'
-    }]
-  },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
-  clickMe: function () {
-    this.setData({ msgtext: "ds" })
-  },
-  onHide: function() {
-    console.log("onhide test")
-  },
-  onLoad: function () {
-    wx.request({
-      url: 'https://ganzhiqiang.wang/goods/query/lasted_goods/', //仅为示例，并非真实的接口地址
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success: function (res) {
-        console.log(res.data)
-      }
-    })
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
 
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
+  data: {
+    sort_button_back_color: ["#00BFFF", "#fff", "#fff"],
+    pages: [
+      {
+        goods_id:154,
+        lookcount:60,
+        address:"上海 虹口",
+        price:168,
+        title:"美的变频空调，每晚只需一度电",
+        desc:"每晚只需一度电",
+        look_count:"99人关注",
+        cover:"http://ozautirlw.bkt.clouddn.com/tmp_c421a6bf9a13323f05d6773d087bb51b.jpg",
+        publis_date:"今天"
+      },
+      {
+        goods_id: 154,
+        lookcount: 60,
+        address: "上海 虹口",
+        price: 168,
+        title: "美的变频空调，每晚只需一度电",
+        desc: "每晚只需一度电",
+        look_count: "99人关注",
+        cover: "http://ozautirlw.bkt.clouddn.com/tmp_c421a6bf9a13323f05d6773d087bb51b.jpg",
+        publis_date: "今天"
+      },
+      {
+        goods_id: 154,
+        lookcount: 60,
+        address: "上海 虹口",
+        price: 168,
+        title: "美的变频空调，每晚只需一度电",
+        desc: "每晚只需一度电",
+        look_count: "99人关注",
+        cover: "http://ozautirlw.bkt.clouddn.com/tmp_c421a6bf9a13323f05d6773d087bb51b.jpg",
+        publis_date: "今天"
       }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
-    }
+    ]
   },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
+  searchClick: function(event) {
     this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
+      text_msg:"搜索结果"
+    })
+  },
+  lastedGoodsClick: function(event) {
+    this.setData({
+      sort_button_back_color: ["#00BFFF", "#fff", "#fff"],
+      text_msg: "最新商品"
+    })
+  },
+  hotGoodsClick: function(event) {
+    this.setData({
+      sort_button_back_color: ["#fff", "#00BFFF", "#fff"],
+      text_msg: "热卖商品"
+    })
+  },
+  recommendGoodsClick: function(event) {
+    this.setData({
+      sort_button_back_color: ["#fff", "#fff", "#00BFFF"],
+      text_msg: "推荐商品"
     })
   }
 })

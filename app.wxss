@@ -1,6 +1,7 @@
 /**app.wxss**/
 @import 'wxss/weui.wxss';
 @import 'wxss/iconfont.wxss';
+@import 'wxss/base.wxss';
 .container {
   width: 100%;
   height: 100%;
