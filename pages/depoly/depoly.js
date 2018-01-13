@@ -18,7 +18,8 @@ var app = getApp()
 Page({
   data: {
     imageObject: {},
-    imageList: []
+    imageList: [],
+    categories:["衣服","鞋子","书本","电器","其他"]
   },
   //事件处理函数
   onLoad: function () {
@@ -34,6 +35,18 @@ Page({
       });
     }, function (error) {
     });
+  },
+  bindCategoryChange: function(e) {
+    this.setData({
+      index: e.detail.value
+    })
+  },
+  publishGoods: function(e) {
+    wx.showToast({
+      title: '发布成功',
+      icon: 'success',
+      duration: 2000
+    })
   }
 });
 

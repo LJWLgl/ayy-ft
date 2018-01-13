@@ -204,7 +204,6 @@
   font-size: 28rpx;
 }
 
-
 .input-container {
   width: 100%;
 }
@@ -215,4 +214,8 @@
   padding: 0 10px;
   color: #888;
   font-size: 14px;
+}
+
+.hide {
+  display: none;
 }

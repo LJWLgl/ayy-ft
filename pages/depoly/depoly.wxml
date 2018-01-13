@@ -1,31 +1,79 @@
-<!--index.wxml-->
 <view class="container">
-  <view class="input-area">
-    <view class="title">
-      <input class="input-title" placeholder="一个响亮的标题" />
-    </view>
-    <view class="desc">
-      <textarea class="txtarea-desc" placeholder="描述一下你的宝贝"/>
-    </view>
-  </view>
-  <view class="image-list">
-    <block wx:for-items="{{imageList}}" wx:for-item="image" wx:key="*item">
-      <view class="image-box">
-        <image class="image" src="{{image}}" mode="aspectFit"></image>
+  <view class="scoller">
+    <view class="top">
+      <view class="input-area">
+        <view class="title">
+          <input class="input-title" placeholder="一个响亮的标题" />
+        </view>
+        <view class="desc">
+          <textarea class="txtarea-desc" placeholder="描述一下你的宝贝" />
+        </view>
       </view>
-    </block>
-    <view class="image-box {{imageList.length >= 3 ? 'hide':'show-inline'}}">
-      <view class=".big-icon .icon-add" bindtap='didPressChooesImage'></view>
+      <view class="image-list">
+        <block wx:for-items="{{imageList}}" wx:for-item="image" wx:key="*item">
+          <view class="image-box">
+            <image class="image" src="{{image}}" mode="aspectFit"></image>
+          </view>
+        </block>
+        <view class="{{imageList.length >= 3 ? 'hide':'show'}} image-box-add">
+          <view class=".big-icon .icon-add" bindtap='didPressChooesImage'></view>
+        </view>
+      </view>
+      <view class="location">
+        <view class="location-info">
+          <view class="icon-location-fill middle-icon"></view>
+          <view class="txt-address">安徽 芜湖</view>
+        </view>
+      </view>
+    </view>
+    <view class="middle">
+      <view class="base-info">
+        <view class="price">
+          <view class="price-show">
+            <text class="price-txt">价格</text>
+            <text class=".icon-rignt middle-icon"></text>
+          </view>
+          <view class="price-edit">
+            <view class="old-price">
+              <text class="txt-old">现价</text>
+              <input class="input-old" />
+            </view>
+            <view class="new-price">
+              <text class="txt-new">原价</text>
+              <input class="input-new" />
+            </view>
+          </view>
+        </view>
+        <view class='category'>
+          <view class='categroy-show'>
+            <text class='txt-category'>分类</text>
+            <text class=".icon-rignt middle-icon"></text>
+          </view>
+          <view class='categroy-select'>
+            <picker bindchange="bindCategoryChange" value="{{index}}" range="{{categories}}">
+              <view class="picker">
+                当前选择：{{categories[index]}}
+              </view>
+            </picker>
+          </view>
+        </view>
+        <view class="donation">
+          <view class="donation-show">
+            <text class="txt-donation">捐赠</text>
+            <text class="icon-rignt middle-icon"></text>
+          </view>
+          <view class="donation-choose">
+            <checkbox>是否捐赠</checkbox>
+          </view>
+        </view>
+      </view>
     </view>
   </view>
-  <view class="main">
-    <!-- <view class="data">
-      <block wx:for-items="{{imageList}}" wx:for-item="image" wx:key="*item">
-        <image class="image" src="{{image}}" mode="aspectFit"></image>
-        imageURL:
-        <text>{{image}}</text>
-      </block>
-    </view> -->
-    <button bindtap='didPressChooesImage'>上传图片</button>
+  <view class="fixed">
+    <view class="fixed-container">
+      <view class="btn-publish" bindtap="publishGoods">
+        <text class="txt-publish-show">确定发布</text>
+      </view>
+    </view>
   </view>
 </view>

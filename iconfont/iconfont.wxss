@@ -28,6 +28,7 @@
   font-family:"iconfont" !important;
   font-size:24px;
   font-style:normal;
+  color: #333;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -47,4 +48,12 @@
 .icon-like-fill:before {content: "\e668"; color: #f00}
 
 .icon-comment:before {content: "\e667"}
+
+.icon-location-fill:before {content: "\e650"}
+
+.icon-rignt:before {content: "\e6a3"}
+
+.icon-check:before {content: "\e645"}
+
+.icon-close:before {content: "\e646"}
 
