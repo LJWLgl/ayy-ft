@@ -1,4 +1,7 @@
+<import src="../../template/loading" />
+
 <view class="container">
+  <template is="loading"/>
   <view class="scoller">
     <view class="top">
       <view class="input-area">

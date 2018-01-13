@@ -1,19 +1,12 @@
-.container {
-  position: relative;
-}
-
-.top {
-  padding:10px 12px;
-}
-.middle {
-  width: 100%;
-}
-
 .image-list {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   padding: 10px 10px;
+}
+
+.input-area {
+  width: 100%
 }
 
 .image {

@@ -11,7 +11,7 @@ Page({
         title:"美的变频空调",
         desc:"每晚只需一度电",
         look_count:"99人关注",
-        cover:"../../image/yx.png",
+        cover:"http://ozautirlw.bkt.clouddn.com/tmp_c421a6bf9a13323f05d6773d087bb51b.jpg",
         publis_date:"今天"
       },
       {
@@ -19,7 +19,7 @@ Page({
         title: "美的变频空调",
         desc: "每晚只需一度电",
         look_count: "99人关注",
-        cover: "../../image/yx.png",
+        cover: "http://ozautirlw.bkt.clouddn.com/tmp_c421a6bf9a13323f05d6773d087bb51b.jpg",
         publis_date: "今天"
       },
       {
@@ -27,7 +27,7 @@ Page({
         title: "美的变频空调",
         desc: "每晚只需一度电",
         look_count: "99人关注",
-        cover: "../../image/yx.png",
+        cover: "http://ozautirlw.bkt.clouddn.com/tmp_c421a6bf9a13323f05d6773d087bb51b.jpg",
         publis_date: "今天"
       }
     ]
