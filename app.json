@@ -1,8 +1,8 @@
 {
   "pages":[
+    "pages/depoly/depoly",
     "pages/test/test",
     "pages/test/item-detail/item-detail",
-    "pages/depoly/depoly",
     "pages/index/index",
     "pages/user/user",
     "pages/logs/logs"

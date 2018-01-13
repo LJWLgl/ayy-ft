@@ -204,13 +204,6 @@
   font-size: 28rpx;
 }
 
-.hide {
-  display: none;
-}
-
-.show {
-  display: flex;
-}
 
 .input-container {
   width: 100%;
