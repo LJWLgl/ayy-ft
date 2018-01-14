@@ -1,0 +1,11 @@
+<template name="tags">
+  <view class="ayy-tag-list">
+    <block wx:for-items="{{tags}}" wx:for-item="item" wx:key="*item">
+      <view class="ayy-tag-item">{{item}}</view>
+    </block>
+  </view>
+</template>
+
+<template name="tag"> 
+   <view class="ayy-tag-item">热卖</view> 
+</template>

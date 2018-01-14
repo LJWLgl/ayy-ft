@@ -1,9 +1,11 @@
 {
   "pages":[
+    "pages/user/user",
+    "pages/user/setting/setting",
+    "pages/user/mytrace/mytrace",
     "pages/index/index",
     "pages/depoly/depoly",
     "pages/index/item-detail/item-detail",
-    "pages/user/user",
     "pages/logs/logs"
   ],
   "window":{

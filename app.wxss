@@ -18,6 +18,9 @@
 .middle {
   width: 100%;
 }
+.bottom {
+  width: 100%;
+}
 
 .btn-container {
   position: fixed;

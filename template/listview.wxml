@@ -1,20 +1,11 @@
 <import src="loading" />
+<import src="icon" />
 
 <template name="listview">
   <view class="ayy-list-view">
     <view class="ayy-list">
       <block wx:for-items="{{pages}}" wx:for-item="item" wx:key="*item">
         <navigator url="./item-detail/item-detail?goods_id={{item.goods_id}}" class="ayy-list-item">
-          <!-- <image class="navigator-img" src="{{page.cover}}"></image>
-          <view class="navigator-base-info">
-            <view class="navigator-title">{{page.title}}</view>
-            <view class="navigator-desc">{{page.desc}}</view>
-          </view>
-          <view class="navigator-ext-info">
-            <view class="navigator-publish-time">{{page.publis_date}}</view>
-            <view class="navigator-look-count">{{page.look_count}}</view>
-          </view>
-          <view class="navigator-arrow"></view> -->
           <view class="ayy-list-view-image">
             <image class="ayy-list-image" src="{{item.cover}}" />
           </view>
@@ -23,18 +14,24 @@
               <view class="ayy-list-txt-title">{{item.title}}</view>
             </view>
             <view class="ayy-list-bottom">
+              <template is="tag"/> 
               <view class="ayy-list-view-info">
                 <view class="ayy-list-price">{{item.price}}</view>
                 <view class="ayy-list-look-count">{{item.lookcount}}人浏览</view>
               </view>
-              <view class="ayy-list-view-address">
-                <view class="ayy-list-address">{{item.address}}</view>
+              <view class="ayy-list-bottom-info">
+                <view class="ayy-list-view-address">
+                  <view class="ayy-list-address">{{item.address}}</view>
+                </view>
+                <view class="ayy-list-view-detail">
+                  <view class="ayy-list-txt-detail middle-icon icon-rignt-after">详情</view>
+                </view>
               </view>
             </view>
           </view>
         </navigator>
       </block>
-      <template is="nodata"/>
+      <template is="nodata" />
     </view>
   </view>
 </template>

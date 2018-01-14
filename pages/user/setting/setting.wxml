@@ -1,0 +1,24 @@
+<!--pages/user/setting/setting.wxml-->
+<text>pages/user/setting/setting.wxml</text>
+<view class="container">
+  <view class="top">
+    <view class="account">
+      <view class="my-txt-desc">账号和安全</view>
+      <view class="my-icon icon-rignt middle-icon"></view>
+    </view>
+    <view class="account">
+      <view class="my-txt-desc">联系方式</view>
+      <view class="my-icon icon-rignt middle-icon"></view>
+    </view>
+    <view class="account">
+      <view class="my-txt-desc">收货地址</view>
+      <view class="my-icon icon-rignt middle-icon"></view>
+    </view>
+  </view>
+  <view class="middle">
+    <view class="account">
+      <view class="my-txt-desc">关于爱易园</view>
+      <view class="my-icon icon-rignt middle-icon"></view>
+    </view>
+  </view>
+</view>

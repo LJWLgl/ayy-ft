@@ -53,6 +53,8 @@
 
 .icon-rignt:before {content: "\e6a3"}
 
+.icon-rignt-after:after {content: "\e6a3"}
+
 .icon-check:before {content: "\e645"}
 
 .icon-close:before {content: "\e646"}

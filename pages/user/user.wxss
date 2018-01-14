@@ -8,6 +8,14 @@
     font-size: 14px;
     padding: 10px 15px;
 }
+.middle {
+  color: #444;
+}
+
+.bottom {
+  color: #444;
+}
+
 .avatar {
     width: 100px;
     height: 100px;
@@ -22,6 +30,17 @@
     font-size: 12px;
     color: #ddd
 }
+
 .weui-panel {
     width:100%
+}
+
+.my-view-info {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.my-txt-desc {
+  font-size: 14px;
 }

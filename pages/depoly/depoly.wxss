@@ -23,6 +23,7 @@
   align-items: center;
 }
 
+
 .image-box-add {
   width: 62px;
   height: 62px;
@@ -50,6 +51,7 @@
 }
 .scoller {
   padding-bottom: 50px;
+  width: 100%;
 }
 .fixed {
   position: relative;
