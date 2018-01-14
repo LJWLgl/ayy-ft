@@ -8,7 +8,7 @@
         <navigator url="./item-detail/item-detail?goods_id={{item.goods_id}}" class="ayy-list-item">
           <view class="ayy-list-view-image">
             <view class="ayy-list-view-show">
-              <view wx:if="{{3 > 5}}" class="ayy-list-image-icon">
+              <view wx:if="{{item.is_donation == 1}}" class="ayy-list-image-icon">
                 <template is="donation" />
               </view>
               <image class="ayy-list-image" src="{{item.cover}}" />

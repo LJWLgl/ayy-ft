@@ -1,7 +1,7 @@
 Page({
 
   data: {
-    sort_button_back_color: ["#00BFFF", "#fff", "#fff"],
+    sort_button_back_color: ["#fc4768", "#fff", "#fff"],
     pages: [
       {
         goods_id:154,
@@ -13,7 +13,8 @@ Page({
         look_count:"99人关注",
         cover:"http://ozautirlw.bkt.clouddn.com/tmp_c421a6bf9a13323f05d6773d087bb51b.jpg",
         publis_date:"今天",
-        tags: ["热卖", "推荐"]
+        tags: ["热卖", "推荐"],
+        is_donation:0
       },
       {
         goods_id: 154,
@@ -25,7 +26,8 @@ Page({
         look_count: "99人关注",
         cover: "http://ozautirlw.bkt.clouddn.com/tmp_c421a6bf9a13323f05d6773d087bb51b.jpg",
         publis_date: "今天",
-        tags: ["热卖","推荐"]
+        tags: ["热卖","推荐"],
+        is_donation: 1
       },
       {
         goods_id: 154,
@@ -37,7 +39,8 @@ Page({
         look_count: "99人关注",
         cover: "http://ozautirlw.bkt.clouddn.com/tmp_c421a6bf9a13323f05d6773d087bb51b.jpg",
         publis_date: "今天",
-        tags: ["热卖", "推荐"]
+        tags: ["热卖", "推荐"],
+        is_donation: 1
       }
     ]
   },
@@ -48,19 +51,19 @@ Page({
   },
   lastedGoodsClick: function(event) {
     this.setData({
-      sort_button_back_color: ["#00BFFF", "#fff", "#fff"],
+      sort_button_back_color: ["#fc4768", "#fff", "#fff"],
       text_msg: "最新商品"
     })
   },
   hotGoodsClick: function(event) {
     this.setData({
-      sort_button_back_color: ["#fff", "#00BFFF", "#fff"],
+      sort_button_back_color: ["#fff", "#fc4768", "#fff"],
       text_msg: "热卖商品"
     })
   },
   recommendGoodsClick: function(event) {
     this.setData({
-      sort_button_back_color: ["#fff", "#fff", "#00BFFF"],
+      sort_button_back_color: ["#fff", "#fff", "#fc4768"],
       text_msg: "推荐商品"
     })
   }

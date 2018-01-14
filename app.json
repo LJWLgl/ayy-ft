@@ -11,35 +11,35 @@
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#00BFFF",
+    "navigationBarBackgroundColor": "#fc4768",
     "navigationBarTitleText": "爱易园",
-    "navigationBarTextStyle":"#eee333"
+    "navigationBarTextStyle":"#fc4768"
   },
   "tabBar": {
     "selectedColor":"#ddd",
     "borderStyle":"ligit",
     "list": [
       {
-        "iconPath": "image/yx.png",
-        "selectedIconPath": "image/sx.png",
+        "iconPath": "image/index.png",
+        "selectedIconPath": "image/index-s.png",
         "pagePath": "pages/index/index",
         "text": "好货"
       },
       {
-        "iconPath": "image/yx.png",
-        "selectedIconPath": "image/sx.png",
+        "iconPath": "image/like.png",
+        "selectedIconPath": "image/like-s.png",
         "pagePath": "pages/index/index",
         "text": "捐赠"
       },
       {
-        "iconPath": "image/yx.png",
-        "selectedIconPath": "image/sx.png",
+        "iconPath": "image/add.png",
+        "selectedIconPath": "image/add-s.png",
         "pagePath": "pages/depoly/depoly",
         "text": "发布"
       },
       {
-        "iconPath": "image/yx.png",
-        "selectedIconPath": "image/sx.png",
+        "iconPath": "image/people.png",
+        "selectedIconPath": "image/people-s.png",
         "pagePath": "pages/user/user",
         "text": "我的"
       }

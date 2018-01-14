@@ -24,10 +24,11 @@
 .sort-container {
   display: flex;
   margin-top: 20rpx;
+  color: #eee;
 }
 .sort-button {
   padding: 4rpx 30rpx;
-  border:1rpx solid #00BFFF;
+  border:1rpx solid #fc4768;
   font-size: 30rpx;
   width: 150rpx;
   text-align: center;
