@@ -1,9 +1,10 @@
 {
   "pages":[
+    "pages/index/index",
     "pages/user/user",
+    "pages/donation/donation",
     "pages/user/setting/setting",
     "pages/user/mytrace/mytrace",
-    "pages/index/index",
     "pages/depoly/depoly",
     "pages/index/item-detail/item-detail",
     "pages/logs/logs"

@@ -6,6 +6,10 @@
   </view>
 </template>
 
-<template name="tag"> 
-   <view class="ayy-tag-item">热卖</view> 
+<template name="tag">
+  <view class="ayy-tag-item">热卖</view>
+</template>
+
+<template name="donation">
+  <view class="ayy-icon-donation">捐</view>
 </template>

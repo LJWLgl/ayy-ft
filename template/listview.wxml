@@ -7,14 +7,19 @@
       <block wx:for-items="{{pages}}" wx:for-item="item" wx:key="*item">
         <navigator url="./item-detail/item-detail?goods_id={{item.goods_id}}" class="ayy-list-item">
           <view class="ayy-list-view-image">
-            <image class="ayy-list-image" src="{{item.cover}}" />
+            <view class="ayy-list-view-show">
+              <view wx:if="{{3 > 5}}" class="ayy-list-image-icon">
+                <template is="donation" />
+              </view>
+              <image class="ayy-list-image" src="{{item.cover}}" />
+            </view>
           </view>
           <view class="ayy-list-content">
             <view class="ayy-list-view-title">
               <view class="ayy-list-txt-title">{{item.title}}</view>
             </view>
             <view class="ayy-list-bottom">
-              <template is="tag"/> 
+              <template is="tag" />
               <view class="ayy-list-view-info">
                 <view class="ayy-list-price">{{item.price}}</view>
                 <view class="ayy-list-look-count">{{item.lookcount}}人浏览</view>

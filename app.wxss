@@ -17,9 +17,11 @@
 }
 .middle {
   width: 100%;
+  box-sizing: border-box;
 }
 .bottom {
   width: 100%;
+  box-sizing: border-box;
 }
 
 .btn-container {
@@ -35,4 +37,5 @@
 .show {
   display: flex;
 }
+
 

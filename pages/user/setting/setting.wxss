@@ -1,1 +1,34 @@
 /* pages/user/setting/setting.wxss */
+.container {
+  background-color: #eee;
+}
+.top {
+  background-color: #fff; 
+}
+
+.middle {
+  background-color: #fff;
+  margin-top: 10px;
+}
+
+.my-view-setting {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 40px;
+  justify-content: space-between;
+  padding: 6px 10px;
+  border-bottom: 1px solid #eee;
+  align-items: center;
+}
+
+.my-txt-desc {
+  font-size: 14px;  
+}
+
+.my-icon {
+  color: #444;
+  font-size: 14px;
+}
+.border-none {
+  border: none;
+}
