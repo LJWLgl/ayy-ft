@@ -19,7 +19,9 @@ Page({
   data: {
     imageObject: {},
     imageList: [],
-    categories:["衣服","鞋子","书本","电器","其他"]
+    categories:["衣服","鞋子","书本","电器","其他"],
+    donationList: ["是", "否"],
+    dIndex: 1,
   },
   //事件处理函数
   onLoad: function () {
