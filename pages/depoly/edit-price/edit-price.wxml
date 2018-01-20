@@ -1,0 +1,29 @@
+<!--pages/depoly/edit-price/edit-price.wxml-->
+<view class="container">
+  <view class="form-price">
+    <view class="now-price">
+      <view class="txt-now-price-view">
+        <view class="txt-now-price">现价</view>
+      </view>
+      <view class="input-now-price-view">
+        <input type="digit" bindinput="bindNowInput" value='{{inputNowValue}}' />
+      </view>
+    </view>
+    <view class="old-price">
+      <view class="txt-old-price-view">
+        <view class="txt-old-price">原价</view>
+      </view>
+      <view class="input-old-price-view">
+        <input type="digit" bindinput="bindOldInput" value='{{inputOldValue}}' />
+      </view>
+    </view>
+    <view class="freight">
+      <view class="txt-freight-view">
+        <view class="txt-freight">运费</view>
+      </view>
+      <view class="input-freight-view">
+        <slider bindchange="bindFreightSlider"step="1" value="{{inputFreightValue}}" max="30" min="0" block-size="18" show-value/>
+      </view>
+    </view>
+  </view>
+</view>
