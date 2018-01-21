@@ -75,19 +75,23 @@ Page({
         var locationString = res.latitude + "," + res.longitude;
         console.log(locationString);
         wx.request({
-          url: 'http://apis.map.qq.com/ws/geocoder/v1/?l&get_poi=1',
+          url: 'https://apis.map.qq.com/ws/geocoder/v1/?l&get_poi=1',
           data: {
-            "key": "YLFBZ-WHAWI-ZXUGH-53Q65-TOJ7E-ADBNQ",
+            "key": "24FBZ-2V4KW-LLPRZ-OXSWW-MVVIS-RHBLL",
             "location": locationString
           },
           method: 'GET',
           // header: {}, 
           success: function (res) {
             // success
-            console.log("请求成功" + res.data.result);
-            console.log("请求数据:" + res.data.result.address);
+
+            var app = getApp();
+            app.globalData.location.province = res.data.result.address_component.province;
+            app.globalData.location.city = res.data.result.address_component.city;
+            app.globalData.location.district = res.data.result.address_component.district;
+
             that.setData({
-              'location': res.data.result.address
+              location: formatLocationDesc()
             })
           },
           fail: function () {
@@ -111,6 +115,19 @@ Page({
     })
   }
 });
+
+function formatLocationDesc() {
+  var app = getApp();
+  if (app.globalData.location.province == app.globalData.location.city) {
+    var province = app.globalData.location.city;
+    var city = app.globalData.location.district;
+  } else {
+    var province = app.globalData.location.province;
+    var city = app.globalData.location.city;
+  }
+  var location = province.substring(0, province.length - 1) + " "+ city.substring(0, city.length - 1);
+  return location;
+}
 
 function didPressChooesImage(that, resolve, reject) {
   initQiniu();

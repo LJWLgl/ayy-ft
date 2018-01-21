@@ -1,7 +1,7 @@
 {
   "pages":[
-    "pages/depoly/depoly",
-    "pages/depoly/edit-price/edit-price",
+    "pages/depoly/depoly",    
+    "pages/depoly/edit-price/edit-price",    
     "pages/index/index",
     "pages/user/user",
     "pages/donation/donation",

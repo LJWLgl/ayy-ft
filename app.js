@@ -34,6 +34,11 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    location:{
+      province:"",
+      city:"",
+      district:""
+    }
   }
 })

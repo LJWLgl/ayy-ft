@@ -1,12 +1,12 @@
 <import src="../../template/loading" />
 
 <view class="container">
-  <template is="loading" />
+  <!-- <template is="loading" /> -->
   <view class="scoller">
     <view class="top">
       <view class="input-area">
         <view class="title">
-          <input class="input-title" placeholder="一个响亮的标题" />
+          <input class="input-title" placeholder="来个响亮的标题" />
         </view>
         <view class="desc">
           <textarea class="txtarea-desc" placeholder="描述一下你的宝贝" />
@@ -34,17 +34,17 @@
         <view class="price list-item">
           <view id="price" class="price-show form-list" bindtap="clickEditPrice">
             <view class="price-txt">价格</view>
-            <view class=".icon-rignt middle-icon"></view>
+            <view class="icon-rignt-after middle-icon"></view>
           </view>
           <view wx:if="{{1 > 0}}" class="price-edit">
-            <view class="old-price">
-              <view class="txt-old">现价 {{price.now}}</view>
+            <view class="price-edit-item">
+              <view class="txt-old">现价 ￥{{price.now}}</view>
             </view>
-            <view class="new-price">
-              <view class="txt-new">原价 {{price.old}}</view>
+            <view class="price-edit-item">
+              <view class="txt-new">原价 ￥{{price.old}}</view>
             </view>
-            <view class="freight">
-              <view class="txt-freight">运费 {{price.freight}}</view>
+            <view class="price-edit-item">
+              <view class="txt-freight">运费 ￥{{price.freight}}</view>
             </view>
           </view>
         </view>
@@ -60,7 +60,7 @@
           <picker bindchange="bindPickerChange" value="{{dIndex}}" range="{{donationList}}">
             <view class="donation-show form-list">
               <view class="txt-donation">是否捐赠</view>
-              <view class="icon-rignt-after middle-icon">{{donationList[dIndex]}}</view>
+              <view class="icon-rignt-after middle-icon donation-value">{{donationList[dIndex]}}</view>
             </view>
           </picker>
         </view>
@@ -70,7 +70,9 @@
   <view class="fixed">
     <view class="fixed-container">
       <view class="btn-publish" bindtap="publishGoods">
-        <view class="txt-publish-show">确定发布</view>
+        <view class="txt-publish-show">
+          <text class="txt-publish">确定发布</text>
+        </view>
       </view>
     </view>
   </view>

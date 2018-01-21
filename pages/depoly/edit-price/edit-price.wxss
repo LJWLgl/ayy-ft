@@ -1,1 +1,52 @@
 /* pages/depoly/edit-price/edit-price.wxss */
+
+.form-price {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.item {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 60px;
+  border-bottom: 1px solid #eee;
+}
+.item-desc {
+  flex: 3;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  color: #444;
+  font-size: 14px;
+  position: relative;
+}
+
+.item-edit {
+  flex: 7;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  color: #444;
+}
+.input-freight-view {
+  display: flex;
+}
+.input {
+  width: 100%;
+}
+.freight-value {
+  flex: 1;
+}
+.freight-slider {
+  flex: 7;
+}
+
+.money-logo::after {
+  content: "￥";
+  color: #888;
+  font-weight: lighter;
+  position: absolute;
+  right: 2px;
+}
