@@ -1,5 +1,9 @@
+var location = require('../../utils/location.js')
 Page({
-
+  onLoad: function() {
+    // 定位
+    // location.getCityNameOFLocation()
+  },
   data: {
     sort_button_back_color: ["#fc4768", "#fff", "#fff"],
     pages: [
@@ -65,6 +69,11 @@ Page({
     this.setData({
       sort_button_back_color: ["#fff", "#fff", "#fc4768"],
       text_msg: "推荐商品"
+    })
+  },
+  queryNewestList: function(type) {
+    var app = getApp();
+    wx.request({
     })
   }
 })

@@ -1,11 +1,7 @@
 //app.js
 App({
   onLaunch: function () {
-    // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-
+    
     // 登录
     wx.login({
       success: function(res) {
@@ -18,12 +14,13 @@ App({
               wx.request({
                 url: 'http://localhost:8081/people/login/',
                 method: 'GET',
+                dataType: 'json',
                 data: {
                   code: jsCode,
                   userInfo: res.userInfo
                 },
                 success: function(res) {
-                  console.log("success" + res.data)
+                  console.log("success" + JSON.stringify(res))
                 }
               });
             }
@@ -31,30 +28,19 @@ App({
         }
       }
     })
-    // 获取用户信息
-    wx.getSetting({
-      success: res => {
-        wx.getUserInfo({
-          success: res => {
-            // 可以将 res 发送给后台解码出 unionId
-            this.globalData.userInfo = res.userInfo
-            console.log("----" + res.userInfo);
-            // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-            // 所以此处加入 callback 以防止这种情况
-            if (this.userInfoReadyCallback) {
-              this.userInfoReadyCallback(res)
-            }
-          }
-        })
-      }
-    })
   },
   globalData: {
-    userInfo: null,
-    location:{
-      province:"",
-      city:"",
-      district:""
+    userInfo: {
+      userId:"",
+      province: "",
+      city: "",
+      district: "",
+      location: ""
+    },
+    domain: {
+      dev:"https://www.ganzhiqiang.wang/",
+      tencentMap:"",
+      imageUpload:"",
     }
   }
 })

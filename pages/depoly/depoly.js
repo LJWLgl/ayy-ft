@@ -86,9 +86,9 @@ Page({
             // success
 
             var app = getApp();
-            app.globalData.location.province = res.data.result.address_component.province;
-            app.globalData.location.city = res.data.result.address_component.city;
-            app.globalData.location.district = res.data.result.address_component.district;
+            app.globalData.userInfo.province = res.data.result.address_component.province;
+            app.globalData.userInfo.city = res.data.result.address_component.city;
+            app.globalData.userInfo.district = res.data.result.address_component.district;
 
             that.setData({
               location: formatLocationDesc()
@@ -118,12 +118,12 @@ Page({
 
 function formatLocationDesc() {
   var app = getApp();
-  if (app.globalData.location.province == app.globalData.location.city) {
-    var province = app.globalData.location.city;
-    var city = app.globalData.location.district;
+  if (app.globalData.userInfo.province == app.globalData.userInfo.city) {
+    var province = app.globalData.userInfo.city;
+    var city = app.globalData.userInfo.district;
   } else {
-    var province = app.globalData.location.province;
-    var city = app.globalData.location.city;
+    var province = app.globalData.userInfo.province;
+    var city = app.globalData.userInfo.city;
   }
   var location = province.substring(0, province.length - 1) + " "+ city.substring(0, city.length - 1);
   return location;
