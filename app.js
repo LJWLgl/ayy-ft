@@ -38,7 +38,7 @@ App({
       location: ""
     },
     domain: {
-      dev:"https://www.ganzhiqiang.wang/",
+      dev:"http://localhost:8081/",
       tencentMap:"",
       imageUpload:"",
     }
