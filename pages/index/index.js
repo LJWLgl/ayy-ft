@@ -76,29 +76,29 @@ Page({
     var app = getApp();
     var _that = this
     wx.request({
-      url: app.globalData.domain.dev + 'goods/query/lasted_goods/',
+      url: app.globalData.domain.dev + 'goods/query/',
       method: 'GET',
       data:{
-        // 'type': type,
-        // 'user_id': app.globalData.userInfo.userId
+        'type': 1,
+        'start': 0,
+        'limit': 24,
       },
       success:function(res) {
         console.log(JSON.stringify(res));
         var _page = new Array();
-        var _data = res.data.data
+        var _data = res.data.data.object_list
         for (var i=0; i< _data.length; i++) {
           _page.push({
             goods_id: _data[i].id,
-            lookcount: 60,
-            address: "上海 虹口",
+            lookcount: _data[i].look_count,
+            address: _data[i].publish_address,
             price: _data[i].price,
             title: _data[i].title,
             desc: _data[i].descible,
-            look_count: "99人关注",
-            cover: "http://ozautirlw.bkt.clouddn.com/tmp_c421a6bf9a13323f05d6773d087bb51b.jpg",
-            publis_date: "今天",
-            tags: ["热卖", "推荐"],
-            is_donation: 0
+            cover: _data[i].cover.path,
+            publis_date: _data[i].publish_date,
+            tags: _data[i].tags,
+            is_donation: 1
           })
           console.log(JSON.stringify(res));
         }

@@ -17,12 +17,14 @@ function initQiniu() {
 var app = getApp()
 Page({
   data: {
-    imageObject: {},
     imageList: [],
     categories:["衣服","鞋子","书本","电器","其他"],
+    cIndex:0,
     donationList: ["是", "否"],
+    dIndex: 1,    
     location:'',
-    dIndex: 1,
+    title: '',
+    desc: '',
     price:{
       now: "",
       old: "",
@@ -47,6 +49,16 @@ Page({
     }, function (error) {
     });
   },
+  bindTitleInputChange: function(e) {
+    this.setData({
+      'title': e.detail.value
+    })
+  },
+  bindDescInputChange: function(e) {
+    this.setData({
+      'desc': e.detail.value
+    })
+  },
   clickEditPrice: function(e) {
     var _that = this;
     wx.navigateTo({
@@ -55,10 +67,39 @@ Page({
   },
   bindCategoryChange: function(e) {
     this.setData({
-      index: e.detail.value
+      cIndex: e.detail.value
+    })
+  },
+  bindPickerChange: function(e) {
+    this.setData({
+      dIndex: e.detail.value
     })
   },
   publishGoods: function(e) {
+    var _that = this;
+    var app = getApp();
+    wx.request({
+      url: app.globalData.domain.dev + 'goods/add/',
+      method: 'POST',
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      data:{
+        'user_id': 17,
+        'title': _that.data.title,
+        'descible': _that.data.desc,
+        'price': _that.data.price.now,
+        'old_price': _that.data.price.old,
+        'freight': _that.data.price.freight,
+        'image_list': _that.data.imageList,
+        'publish_address': _that.data.location,
+        'category': _that.data.cIndex,
+        'is_donation': _that.data.dIndex
+      },
+      success: function (res) {
+        //console.log(JSON.parse(res))
+      }
+    })
     wx.showToast({
       title: '发布成功',
       icon: 'success',

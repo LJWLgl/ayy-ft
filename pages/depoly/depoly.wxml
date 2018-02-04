@@ -6,10 +6,10 @@
     <view class="top">
       <view class="input-area">
         <view class="title">
-          <input class="input-title" placeholder="来个响亮的标题" />
+          <input bindinput="bindTitleInputChange" class="input-title" placeholder="来个响亮的标题" />
         </view>
         <view class="desc">
-          <textarea class="txtarea-desc" placeholder="描述一下你的宝贝" />
+          <textarea bindinput="bindDescInputChange" class="txtarea-desc" placeholder="描述一下你的宝贝" />
         </view>
       </view>
       <view class="image-list">
@@ -49,10 +49,10 @@
           </view>
         </view>
         <view class="category list-item">
-          <picker bindchange="bindCategoryChange" value="{{index}}" range="{{categories}}">
+          <picker bindchange="bindCategoryChange" value="{{cIndex}}" range="{{categories}}">
             <view class="form-list">
               <view class="txt-category">分类</view>
-              <view class="icon-rignt-after middle-icon">{{categories[index]}}</view>
+              <view class="icon-rignt-after middle-icon">{{categories[cIndex]}}</view>
             </view>
           </picker>
         </view>
