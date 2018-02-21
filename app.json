@@ -1,9 +1,10 @@
 {
   "pages":[
+    "pages/user/user",
+    "pages/user/setting/about",    
     "pages/index/index",    
     "pages/depoly/depoly",    
-    "pages/depoly/edit-price/edit-price",    
-    "pages/user/user",
+    "pages/depoly/edit-price/edit-price",
     "pages/donation/donation",
     "pages/user/setting/setting",
     "pages/user/mytrace/mytrace",
@@ -14,7 +15,8 @@
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fc4768",
     "navigationBarTitleText": "爱易园",
-    "navigationBarTextStyle":"#fc4768"
+    "navigationBarTextStyle":"#fc4768",
+    "enablePullDownRefresh":true
   },
   "tabBar": {
     "selectedColor":"#ddd",

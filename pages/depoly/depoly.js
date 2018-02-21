@@ -98,12 +98,15 @@ Page({
       },
       success: function (res) {
         //console.log(JSON.parse(res))
+        wx.showToast({
+          title: '发布成功',
+          icon: 'success',
+          duration: 2000
+        })
+        wx.reLaunch({
+          url: '/index',
+        })
       }
-    })
-    wx.showToast({
-      title: '发布成功',
-      icon: 'success',
-      duration: 2000
     })
   },
   getCityNameOFLocation: function () {

@@ -1,0 +1,26 @@
+/* pages/user/setting/about.wxss */
+.top {
+  background-color: #e6eaf2; 
+  height:200px;
+  display:flex;
+  flex-direction:column;
+  text-align:center;
+  font-size:14px;
+  padding:10px 15px;
+}
+
+.avator {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 10px auto;
+}
+
+.version-txt {
+  color: #ccc;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.desc-txt {
+  color: #444;
+}

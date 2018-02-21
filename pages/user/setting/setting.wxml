@@ -15,7 +15,7 @@
     </view>
   </view>
   <view class="middle">
-    <view class="my-view-setting border-none">
+    <view class="my-view-setting border-none" bindtap="aboutAPP">
       <view class="my-txt-desc">关于爱易园</view>
       <view class="my-icon icon-rignt middle-icon"></view>
     </view>

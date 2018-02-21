@@ -3,52 +3,28 @@ Page({
   onLoad: function() {
     // 定位
     // location.getCityNameOFLocation()
-    this.queryNewestList(1);
+    this.queryGoodsList(this.data.queryType);
   },
   data: {
     sort_button_back_color: ["#fc4768", "#fff", "#fff"],
-    pages: [
-      {
-        goods_id:154,
-        lookcount:60,
-        address:"上海 虹口",
-        price:168,
-        title:"美的变频空调，每晚只需一度电",
-        desc:"每晚只需一度电",
-        look_count:"99人关注",
-        cover:"http://ozautirlw.bkt.clouddn.com/tmp_c421a6bf9a13323f05d6773d087bb51b.jpg",
-        publis_date:"今天",
-        tags: ["热卖", "推荐"],
-        is_donation:0
-      },
-      {
-        goods_id: 154,
-        lookcount: 60,
-        address: "上海 虹口",
-        price: 168,
-        title: "美的变频空调，每晚只需一度电",
-        desc: "每晚只需一度电",
-        look_count: "99人关注",
-        cover: "http://ozautirlw.bkt.clouddn.com/tmp_c421a6bf9a13323f05d6773d087bb51b.jpg",
-        publis_date: "今天",
-        tags: ["热卖","推荐"],
-        is_donation: 1
-      },
-      {
-        goods_id: 154,
-        lookcount: 60,
-        address: "上海 虹口",
-        price: 168,
-        title: "美的变频空调，每晚只需一度电",
-        desc: "每晚只需一度电",
-        look_count: "99人关注",
-        cover: "http://ozautirlw.bkt.clouddn.com/tmp_c421a6bf9a13323f05d6773d087bb51b.jpg",
-        publis_date: "今天",
-        tags: ["热卖", "推荐"],
-        is_donation: 1
-      }
-    ]
+    pages: [],
+    queryType:1,
+    hasMore: true,
+    start: 0,
+    limit: 24,
   },
+
+  onPullDownRefresh: function () {
+    wx.showNavigationBarLoading() //在标题栏中显示加载
+    this.queryGoodsList(this.data.queryType);
+    //模拟加载
+    setTimeout(function () {
+      // complete
+      wx.hideNavigationBarLoading() //完成停止加载
+      wx.stopPullDownRefresh() //停止下拉刷新
+    }, 600);
+  },
+
   searchClick: function(event) {
     this.setData({
       text_msg:"搜索结果"
@@ -56,32 +32,38 @@ Page({
   },
   lastedGoodsClick: function(event) {
     this.setData({
+      queryType: 1,
       sort_button_back_color: ["#fc4768", "#fff", "#fff"],
       text_msg: "最新商品"
     })
+    this.queryGoodsList(this.data.queryType);
   },
   hotGoodsClick: function(event) {
     this.setData({
+      queryType: 2,
       sort_button_back_color: ["#fff", "#fc4768", "#fff"],
       text_msg: "热卖商品"
     })
+    this.queryGoodsList(this.data.queryType);
   },
   recommendGoodsClick: function(event) {
     this.setData({
+      queryType: 3,
       sort_button_back_color: ["#fff", "#fff", "#fc4768"],
       text_msg: "推荐商品"
     })
+    this.queryGoodsList(this.data.queryType);
   },
-  queryNewestList: function(type) {
+  queryGoodsList: function(type) {
     var app = getApp();
     var _that = this
     wx.request({
       url: app.globalData.domain.dev + 'goods/query/',
       method: 'GET',
       data:{
-        'type': 1,
-        'start': 0,
-        'limit': 24,
+        'type': _that.data.queryType,
+        'start': _that.data.start,
+        'limit': _that.data.limit,
       },
       success:function(res) {
         console.log(JSON.stringify(res));
@@ -98,7 +80,7 @@ Page({
             cover: _data[i].cover.path,
             publis_date: _data[i].publish_date,
             tags: _data[i].tags,
-            is_donation: 1
+            is_donation: _data[i].is_donation
           })
           console.log(JSON.stringify(res));
         }
