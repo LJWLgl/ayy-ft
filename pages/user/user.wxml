@@ -18,14 +18,14 @@
         <view class="my-txt-desc">我的喜欢</view>
         <view class="my-icon icon-rignt-after middle-icon"></view>
       </view>
-      <view class="my-view-info" id="favorite" bindtap="jumpTomytrace">
+      <view class="my-view-info border-none" id="favorite" bindtap="jumpTomytrace">
         <view class="my-txt-desc">我的收藏</view>
         <view class="my-icon icon-rignt-after middle-icon"></view>
       </view>
-      <view class="my-view-info border-none" id="look" bindtap="jumpTomytrace">
+      <!-- <view class="my-view-info border-none" id="look" bindtap="jumpTomytrace">
         <view class="my-txt-desc">我的浏览</view>
         <view class="my-icon icon-rignt-after middle-icon"></view>
-      </view>
+      </view> -->
     </view>
   </view>
   <view class="bottom">

@@ -1,8 +1,8 @@
 {
   "pages":[
+    "pages/index/index",    
     "pages/user/user",
     "pages/user/setting/about",    
-    "pages/index/index",    
     "pages/depoly/depoly",    
     "pages/depoly/edit-price/edit-price",
     "pages/donation/donation",
