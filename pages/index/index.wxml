@@ -2,7 +2,7 @@
 
 <view class="container">
   <view class="input-container">
-    <input class="search-input" bindconfirm="searchClick" placeholder="搜二手" placeholder-style="color:#ddd;font-size:32rpx;"></input>
+    <input class="search-input" bindconfirm="searchClick" confirm-type="search" placeholder="搜二手" placeholder-style="color:#ddd;font-size:32rpx;"></input>
     <image class="search-icon" src="../../image/sx.png"></image>
   </view>
   <view class="sort-container">

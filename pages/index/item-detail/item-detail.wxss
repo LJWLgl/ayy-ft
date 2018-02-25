@@ -94,7 +94,7 @@
 }
 
 .scroll {
-  padding-bottom: 70rpx;
+  padding-bottom: 90rpx;
 }
 
 .bottom {

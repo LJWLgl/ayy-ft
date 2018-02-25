@@ -20,8 +20,8 @@ Page({
     imageList: [],
     categories:["衣服","鞋子","书本","电器","其他"],
     cIndex:0,
-    donationList: ["是", "否"],
-    dIndex: 1,    
+    donationList: ["否", "是"],
+    dIndex: 0,    
     location:'',
     title: '',
     desc: '',
@@ -101,10 +101,10 @@ Page({
         wx.showToast({
           title: '发布成功',
           icon: 'success',
-          duration: 2000
+          duration: 1500
         })
         wx.reLaunch({
-          url: '/index',
+          url: '/pages/index/index',
         })
       }
     })

@@ -1,2 +1,5 @@
-<!--pages/donation/donation.wxml-->
-<text>pages/donation/donation.wxml</text>
+<import src="../../template/listview" />
+
+<view class="container">
+  <template is="listview" data="{{pages}}"/>
+</view>

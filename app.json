@@ -1,6 +1,6 @@
 {
   "pages":[
-    "pages/index/index",    
+    "pages/index/index",
     "pages/user/user",
     "pages/user/setting/about",    
     "pages/depoly/depoly",    
@@ -31,7 +31,7 @@
       {
         "iconPath": "image/like.png",
         "selectedIconPath": "image/like-s.png",
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/donation/donation",
         "text": "捐赠"
       },
       {

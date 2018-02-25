@@ -2,15 +2,20 @@
 App({
   globalData: {
     userInfo: {
-      userId: "",
+      userId: 0,
+      nickname: "",
+      avatar: "",
+      gender: "",
       province: "",
       city: "",
       district: "",
-      location: ""
+      location: "",
+      telephone: "",
+      email: "",
     },
     domain: {
       dev: "http://localhost:8081/",
-      // dev: "https://ganzhiqiang.wang",
+      // dev: "https://ganzhiqiang.wang/",
       tencentMap: "",
       imageUpload: "",
     }
@@ -36,8 +41,12 @@ App({
                 },
                 success: function(res) {
                   var app = getApp();
-                  app.globalData.userInfo.userId = res.data.data
-                  console.log("success" + JSON.stringify(res))
+                  var _data = res.data.data;
+                  console.log(res);
+                  app.globalData.userInfo.userId = _data.user_base.id;
+                  app.globalData.userInfo.nickname = _data.user_base.nickname;
+                  app.globalData.userInfo.avatar = _data.user_base.avatar;
+                  app.globalData.userInfo.location = _data.user_base.address;
                   console.log(app.globalData.userInfo.userId)
                 }
               });

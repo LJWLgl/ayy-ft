@@ -1,4 +1,3 @@
-var location = require('../../utils/location.js')
 Page({
   onLoad: function() {
     // 定位
@@ -29,6 +28,7 @@ Page({
     this.setData({
       text_msg:"搜索结果"
     })
+    this.searchGoods(event.detail.value)
   },
   lastedGoodsClick: function(event) {
     this.setData({
@@ -54,6 +54,48 @@ Page({
     })
     this.queryGoodsList(this.data.queryType);
   },
+  searchGoods: function (keyword) {
+    var _that = this;
+    var app = getApp();
+    wx.request({
+      url: app.globalData.domain.dev + 'goods/search/',
+      method: 'GET',
+      data: {
+        'keyword': keyword,
+        'start': _that.data.start,
+        'limit': _that.data.limit,
+      },
+      success: function (res) {
+        if (res.data.status != 1) {
+          wx.showToast({
+            title: res.data.message,
+            icon: 'none',
+          })
+          return;
+        }
+        var _page = new Array();
+        var _data = res.data.data.object_list
+        for (var i = 0; i < _data.length; i++) {
+          _page.push({
+            goods_id: _data[i].id,
+            lookcount: _data[i].look_count,
+            address: _data[i].publish_address,
+            price: _data[i].price,
+            title: _data[i].title,
+            desc: _data[i].descible,
+            cover: _data[i].cover.path,
+            publis_date: _data[i].publish_date,
+            tags: _data[i].tags,
+            is_donation: _data[i].is_donation
+          })
+          console.log(JSON.stringify(res));
+        }
+        _that.setData({
+          pages: _page
+        })
+      }
+    })
+  },
   queryGoodsList: function(type) {
     var app = getApp();
     var _that = this
@@ -66,6 +108,13 @@ Page({
         'limit': _that.data.limit,
       },
       success:function(res) {
+        if (res.data.status != 1) {
+          wx.showToast({
+            title: res.data.message,
+            icon: 'none',
+          })
+          return;
+        }
         console.log(JSON.stringify(res));
         var _page = new Array();
         var _data = res.data.data.object_list
