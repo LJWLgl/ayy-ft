@@ -14,8 +14,8 @@ App({
       email: "",
     },
     domain: {
-      dev: "http://localhost:8081/",
-      // dev: "https://ganzhiqiang.wang/",
+      // dev: "http://localhost:8081/",
+      dev: "https://ganzhiqiang.wang/",
       tencentMap: "",
       imageUpload: "",
     }

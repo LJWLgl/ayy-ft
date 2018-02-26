@@ -31,12 +31,13 @@ Page({
   onShow: function() {
     this.goodsDetail();
     this.commentQuery();
+    console.log("likeId" + this.data.likeId)
   },
   previewImage: function (e) {
     var current = e.target.dataset.src;
     wx.previewImage({
       current: current, // 当前显示图片的http链接  
-      urls: this.data.imgalist // 需要预览的图片http链接列表  
+      urls: this.data.imagelist // 需要预览的图片http链接列表  
     })
   },
   sendClick: function (e) {
@@ -69,13 +70,118 @@ Page({
     })
   },
   likeClick: function (e) {
-    this.setData({
-      likeClass: this.data.likeClass + 1
-    })
+    if(this.data.likeId == 0) {
+      this.like();
+    } else {
+      this.unlike();
+    }
+    console.log("likeId" + this.data.likeId)
   },
   collectClick: function (e) {
-    this.setData({
-      collectClass: this.data.collectClass + 1
+    if (this.data.favoriteId == 0) {
+      this.favorite();
+    } else {
+      this.unfavorite();
+    }
+  },
+  like: function(e) {
+    var _that = this;
+    var app = getApp();
+    wx.request({
+      url: app.globalData.domain.dev + 'like/',
+      method: 'GET',
+      data: {
+        user_id: app.globalData.userInfo.userId,
+        resource_id: _that.data.goodsId,
+        resource_type: 2,
+      },
+      success: function (res) {
+        if (res.data.status != 1) {
+          wx.showToast({
+            title: res.data.message,
+            icon: 'none',
+          })
+          return;
+        }
+        _that.setData({
+          likeId: res.data.data
+        })
+        console.log(res);
+      }
+    })
+  },
+  unlike: function (e) {
+    var _that = this;
+    var app = getApp();
+    wx.request({
+      url: app.globalData.domain.dev + 'unlike/',
+      method: 'GET',
+      data: {
+        like_id: _that.data.likeId,
+      },
+      success: function (res) {
+        if (res.data.status != 1) {
+          wx.showToast({
+            title: res.data.message,
+            icon: 'none',
+          })
+          return;
+        }
+        _that.setData({
+          likeId:0
+        })
+        console.log(res);
+      }
+    })
+  },
+  favorite: function (e) {
+    var _that = this;
+    var app = getApp();
+    wx.request({
+      url: app.globalData.domain.dev + 'favorite/',
+      method: 'GET',
+      data: {
+        user_id: app.globalData.userInfo.userId,
+        resource_id: _that.data.goodsId,
+        resource_type: 2,
+      },
+      success: function (res) {
+        if (res.data.status != 1) {
+          wx.showToast({
+            title: res.data.message,
+            icon: 'none',
+          })
+          return;
+        }
+        _that.setData({
+          favoriteId:res.data.data
+        })
+        console.log(res);
+      }
+    })
+  },
+  unfavorite: function (e) {
+    var _that = this;
+    var app = getApp();
+    wx.request({
+      url: app.globalData.domain.dev + 'unfavorite/',
+      method: 'GET',
+      data: {
+        favorite_id: _that.data.favoriteId,
+      },
+      success: function (res) {
+        if (res.data.status != 1) {
+          wx.showToast({
+            title: res.data.message,
+            icon: 'none',
+          })
+          return;
+        }
+        _that.setData({
+          favoriteId: 0
+        })
+        console.log(res);
+      }
     })
   },
   addComment: function (content) {

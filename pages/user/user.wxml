@@ -10,15 +10,15 @@
         <view class="my-txt-desc">我的积分</view>
         <view class="my-icon icon-rignt-after middle-icon">{{integral}}</view>
       </view>
-      <view class="my-view-info" id="publish" bindtap="jumpTomytrace">
+      <view class="my-view-info" id="1" bindtap="jumpTomytrace">
         <view class="my-txt-desc">我的发布</view>
         <view class="my-icon icon-rignt-after middle-icon">{{publishCount}}</view>
       </view>
-      <view class="my-view-info" id="like" bindtap="jumpTomytrace">
+      <view class="my-view-info" id="3" bindtap="jumpTomytrace">
         <view class="my-txt-desc">我的喜欢</view>
         <view class="my-icon icon-rignt-after middle-icon">{{likeCount}}</view>
       </view>
-      <view class="my-view-info border-none" id="favorite" bindtap="jumpTomytrace">
+      <view class="my-view-info border-none" id="4" bindtap="jumpTomytrace">
         <view class="my-txt-desc">我的收藏</view>
         <view class="my-icon icon-rignt-after middle-icon">{{favoriteCount}}</view>
       </view>

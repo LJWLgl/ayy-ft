@@ -10,7 +10,7 @@
     <view class="hot-button sort-button" bindtap="hotGoodsClick" style="background-color:{{sort_button_back_color[1]}}">热卖</view>
     <view class="recommend-button sort-button" bindtap="recommendGoodsClick" style="background-color:{{sort_button_back_color[2]}}">推荐</view>
   </view>
-  <view>{{text_msg}}</view>
+  <!-- <view>{{text_msg}}</view> -->
   <template is="listview" data="{{pages}}"/>
   <!-- <view class="kind-list-item-bd">
     <view class="navigator-box">

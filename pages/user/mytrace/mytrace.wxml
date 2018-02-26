@@ -1,7 +1,6 @@
 <import src="../../../template/listview" />
 
 <!--pages/user/mytrace/mytrace.wxml-->
-<text>pages/user/mytrace/mytrace.wxml</text>
 <view class="container">
   <template is="listview" data="{{pages}}"/>
 </view>
