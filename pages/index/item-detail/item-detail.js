@@ -22,6 +22,7 @@ Page({
     comments: [],
     start: 0,
     limit: 24,
+    sellerPhone:''
   },
   onLoad: function (options) {
     this.setData({
@@ -35,6 +36,7 @@ Page({
   },
   previewImage: function (e) {
     var current = e.target.dataset.src;
+    console.log(e)
     wx.previewImage({
       current: current, // 当前显示图片的http链接  
       urls: this.data.imagelist // 需要预览的图片http链接列表  
@@ -249,6 +251,17 @@ Page({
       }
     })
   },
+  contactSeller: function(e) {
+    var app = getApp();
+    if (! this.data.sellerPhone) {
+      wx.showToast({
+        title: '对方未留下联系方式',
+      })
+    }
+    wx.makePhoneCall({
+      phoneNumber: app.globalData.userInfo.telephone,
+    })
+  },
   goodsDetail: function (e) {
     var _that = this;
     var app = getApp();
@@ -262,7 +275,6 @@ Page({
         if (res.data.status != 1) {
           wx.showToast({
             title: res.data.message,
-            icon: 'none',
           })
           return;
         }
@@ -274,6 +286,7 @@ Page({
         _that.setData({
           username: data.user_vo.user_base.nickname,
           avatar: data.user_vo.user_base.avatar,
+          sellerPhone: data.user_vo.telephone,
           publishDesc: data.publish_date + " 发布于 " + data.publish_address,
           price: data.price,
           oldPrice: data.old_price,

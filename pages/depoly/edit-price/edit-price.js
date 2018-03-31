@@ -13,7 +13,7 @@ Page({
       'inputFreightValue': option.freight
     })
   },
-  onUnload: function () {
+  priceFinish: function (e) {
     var pages = getCurrentPages();
     var prePage = pages[pages.length - 2];
     var _that = this;
@@ -24,7 +24,10 @@ Page({
         old: _that.data.inputOldValue,
         freight: _that.data.inputFreightValue
         }
-    }) 
+    })
+    wx.navigateBack({
+      delta:1
+    })
   },
   bindNowInput: function(e) {
     this.setData({

@@ -1,10 +1,13 @@
 {
   "pages":[
-    "pages/index/index",
+    "pages/index/index",    
+    "pages/user/setting/phoneedit",
+    "pages/user/setting/addressedit",   
     "pages/user/user",
-    "pages/user/setting/about",    
+    "pages/user/setting/about",
     "pages/depoly/depoly",    
     "pages/depoly/edit-price/edit-price",
+    "pages/depoly/edittag/edittag",
     "pages/donation/donation",
     "pages/user/setting/setting",
     "pages/user/mytrace/mytrace",

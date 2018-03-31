@@ -1,7 +1,7 @@
 <view class="container">
   <view class="top">
-    <image class ="avator" src="http://ozautirlw.bkt.clouddn.com/tmp_c421a6bf9a13323f05d6773d087bb51b.jpg"></image>
-    <text class="version-txt">版本号：1.0.0  开发者：甘志强</text>
+    <image class ="avator" src="http://nanxuan.qiniuts.com/ayy-logo.png"></image>
+    <text class="version-txt">版本号：1.1.0  开发者：甘志强</text>
     <text class="desc-txt">爱易园是一个为学生服务的校园二手交易平台，在这里，你总是可以淘到你想要的</text>
   </view>
 </view>

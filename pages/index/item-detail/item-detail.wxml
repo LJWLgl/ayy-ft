@@ -86,7 +86,7 @@
         </view>
       </view>
       <view class="contact {{isShow == 1 ? 'hide':'show'}}">
-        <view class="btn-contact">
+        <view class="btn-contact" bindtap='contactSeller'>
           <text>联系卖家</text>
         </view>
       </view>

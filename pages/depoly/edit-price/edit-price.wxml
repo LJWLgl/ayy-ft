@@ -31,4 +31,11 @@
       </view>
     </view>
   </view>
+  <view class="middle">
+    <view class="btn-edit" bindtap="priceFinish">
+      <view class="txt-publish-show">
+        <text class="txt-publish">完成</text>
+      </view>
+    </view>
+  </view>
 </view>

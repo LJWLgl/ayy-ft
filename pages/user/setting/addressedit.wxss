@@ -1,0 +1,20 @@
+.address {
+  margin: 10px 0 30px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 16px;
+  color: #444;
+}
+.top {
+  padding: 8px 14px;
+}
+.btn-edit {
+  width: 94%;
+  height: 40px;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  line-height: 40px;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 5px;
+}

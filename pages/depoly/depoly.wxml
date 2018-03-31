@@ -56,6 +56,12 @@
             </view>
           </picker>
         </view>
+        <view class="tag list-item" bindtap="clickEditTag">
+          <view class="form-list">
+            <view class="txt-category">标签</view>
+            <view class="icon-rignt-after middle-icon">{{tagStr}}</view>
+          </view>
+        </view>
         <view class="donation list-item">
           <picker bindchange="bindPickerChange" value="{{dIndex}}" range="{{donationList}}">
             <view class="donation-show form-list">

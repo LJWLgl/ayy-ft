@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="top">
+    <view class="tag">
+      <input bindinput="bindTagInputChange" class="input-title" placeholder="请输入tag（多个tag“#”分隔）" />
+    </view>
+    <view class="btn-edit" bindtap="tagFinish">
+      <view class="txt-publish-show">
+        <text class="txt-publish">完成</text>
+      </view>
+    </view>
+  </view>
+</view>

@@ -12,6 +12,7 @@ App({
       location: "",
       telephone: "",
       email: "",
+      shipAddress: "",
     },
     domain: {
       // dev: "http://localhost:8081/",

@@ -23,7 +23,12 @@ Page({
       wx.stopPullDownRefresh() //停止下拉刷新
     }, 600);
   },
-
+  onReachBottom: function() {
+    this.setData({
+      start: this.data.start + this.data.limit
+    })
+    this.queryGoodsList(this.data.queryType);
+  },
   searchClick: function(event) {
     this.setData({
       text_msg:"搜索结果"
@@ -32,6 +37,7 @@ Page({
   },
   lastedGoodsClick: function(event) {
     this.setData({
+      start: 0,
       queryType: 1,
       sort_button_back_color: ["#fc4768", "#fff", "#fff"],
       text_msg: "最新商品"
@@ -40,6 +46,7 @@ Page({
   },
   hotGoodsClick: function(event) {
     this.setData({
+      start: 0,
       queryType: 2,
       sort_button_back_color: ["#fff", "#fc4768", "#fff"],
       text_msg: "热卖商品"
@@ -48,6 +55,7 @@ Page({
   },
   recommendGoodsClick: function(event) {
     this.setData({
+      start: 0,
       queryType: 3,
       sort_button_back_color: ["#fff", "#fff", "#fc4768"],
       text_msg: "推荐商品"
@@ -73,7 +81,12 @@ Page({
           })
           return;
         }
-        var _page = new Array();
+        var _page
+        if (_that.data.start > 0) {
+          _page = _that.data.pages
+        } else {
+          _page = new Array()
+        }
         var _data = res.data.data.object_list
         for (var i = 0; i < _data.length; i++) {
           _page.push({
@@ -88,7 +101,7 @@ Page({
             tags: _data[i].tags,
             is_donation: _data[i].is_donation
           })
-          console.log(JSON.stringify(res));
+          // console.log(JSON.stringify(res));
         }
         _that.setData({
           pages: _page
@@ -115,8 +128,13 @@ Page({
           })
           return;
         }
-        console.log(JSON.stringify(res));
-        var _page = new Array();
+        // console.log(JSON.stringify(res));
+        var _page;
+        if (_that.data.start > 0) {
+          _page = _that.data.pages
+        } else {
+          _page = new Array()
+        }
         var _data = res.data.data.object_list
         for (var i=0; i< _data.length; i++) {
           _page.push({
@@ -131,7 +149,7 @@ Page({
             tags: _data[i].tags,
             is_donation: _data[i].is_donation
           })
-          console.log(JSON.stringify(res));
+          // console.log(JSON.stringify(res));
         }
         _that.setData({
           pages: _page

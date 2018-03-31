@@ -4,6 +4,7 @@
   width: 100%;
   padding: 10px;
   box-sizing: border-box;
+  margin-bottom: 20px;
 }
 .item {
   display: flex;
@@ -49,4 +50,20 @@
   font-weight: lighter;
   position: absolute;
   right: 2px;
+}
+.btn-edit {
+  width: 80%;
+  height: 40px;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  line-height: 40px;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 5px;
+}
+.middle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }

@@ -42,7 +42,6 @@ Page({
           })
           return;
         }
-        console.log(JSON.stringify(res));
         var _page = new Array();
         var _data = res.data.data.object_list
         for (var i = 0; i < _data.length; i++) {
@@ -58,7 +57,6 @@ Page({
             tags: _data[i].tags,
             is_donation: _data[i].is_donation
           })
-          console.log(JSON.stringify(res));
         }
         _that.setData({
           pages: _page

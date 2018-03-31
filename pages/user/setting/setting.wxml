@@ -5,11 +5,11 @@
       <view class="my-txt-desc">账号和安全</view>
       <view class="my-icon icon-rignt middle-icon"></view>
     </view>
-    <view class="my-view-setting" bindtap="editConnect">
+    <view class="my-view-setting" bindtap="editPhone">
       <view class="my-txt-desc">联系方式</view>
       <view class="my-icon icon-rignt middle-icon"></view>
     </view>
-    <view class="my-view-setting border-none">
+    <view class="my-view-setting border-none" bindtap="editAddress">
       <view class="my-txt-desc">收货地址</view>
       <view class="my-icon icon-rignt middle-icon"></view>
     </view>

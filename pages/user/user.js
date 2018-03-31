@@ -99,6 +99,8 @@ Page({
         app.globalData.userInfo.location = data.user_base.address;
         app.globalData.userInfo.telephone = data.telephone;
         app.globalData.userInfo.email = data.email;
+        app.globalData.userInfo.shipAddress = data.ship_address;
+        console.log(data)
         _that.setData({
           userinfo:{
             username: data.user_base.nickname,

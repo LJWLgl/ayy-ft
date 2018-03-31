@@ -29,7 +29,8 @@ Page({
       now: "",
       old: "",
       freight: ""
-    }
+    },
+    tagStr:''
   },
   //事件处理函数
   onLoad: function () {
@@ -63,6 +64,12 @@ Page({
     var _that = this;
     wx.navigateTo({
       url: 'edit-price/edit-price?' + 'now=' + _that.data.price.now + '&old=' + _that.data.price.old + '&freight=' + _that.data.price.freight,
+    })
+  },
+  clickEditTag: function (e) {
+    var _that = this;
+    wx.navigateTo({
+      url: 'edittag/edittag?tagStr=' + _that.data.tagStr,
     })
   },
   bindCategoryChange: function(e) {
