@@ -15,7 +15,9 @@ Page({
 
   onPullDownRefresh: function () {
     wx.showNavigationBarLoading() //在标题栏中显示加载
-    this.queryGoodsList(this.data.queryType);
+    if (this.data.queryType != 3) {
+      this.queryGoodsList(this.data.queryType);
+    }
     //模拟加载
     setTimeout(function () {
       // complete
@@ -27,7 +29,9 @@ Page({
     this.setData({
       start: this.data.start + this.data.limit
     })
-    this.queryGoodsList(this.data.queryType);
+    if (this.data.queryType != 3) {
+      this.queryGoodsList(this.data.queryType);
+    }
   },
   searchClick: function(event) {
     this.setData({
@@ -119,13 +123,10 @@ Page({
         'type': _that.data.queryType,
         'start': _that.data.start,
         'limit': _that.data.limit,
+        'uid': app.globalData.userInfo.userId
       },
       success:function(res) {
         if (res.data.status != 1) {
-          wx.showToast({
-            title: res.data.message,
-            icon: 'none',
-          })
           return;
         }
         // console.log(JSON.stringify(res));

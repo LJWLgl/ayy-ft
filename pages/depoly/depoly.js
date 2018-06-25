@@ -92,7 +92,7 @@ Page({
         "Content-Type": "application/x-www-form-urlencoded"
       },
       data:{
-        'user_id': 17,
+        'user_id': app.globalData.userInfo.userId,
         'title': _that.data.title,
         'descible': _that.data.desc,
         'price': _that.data.price.now,

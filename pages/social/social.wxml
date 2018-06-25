@@ -1,0 +1,19 @@
+<import src="../../template/listtalk" />
+
+<view class="container">
+  <template is="listtalk" data="{{data}}" />
+  <view class="social-publish-view">
+    <view class="btn-container">
+      <view class="social-publish-content">
+        <view class="social-publish-div">
+          <view class="social-publish-icon">
+            <text class="middle-icon icon-write"></text>
+          </view>
+          <view class="social-publish-txt">
+            <text>发个帖子</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

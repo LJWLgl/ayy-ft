@@ -24,7 +24,7 @@
 .sort-container {
   display: flex;
   margin-top: 20rpx;
-  color: #eee;
+  color: #555;
 }
 .sort-button {
   padding: 4rpx 30rpx;

@@ -23,6 +23,13 @@ Page({
     }, 600);
   },
 
+  onReachBottom: function () {
+    this.setData({
+      start: this.data.start + this.data.limit
+    })
+    this.queryGoodsList(this.data.queryType);
+  },
+
   queryGoodsList: function (type) {
     var app = getApp();
     var _that = this
@@ -42,7 +49,12 @@ Page({
           })
           return;
         }
-        var _page = new Array();
+        var _page
+        if (_that.data.start > 0) {
+          _page = _that.data.pages
+        } else {
+          _page = new Array()
+        }
         var _data = res.data.data.object_list
         for (var i = 0; i < _data.length; i++) {
           _page.push({

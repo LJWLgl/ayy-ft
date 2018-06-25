@@ -1,7 +1,15 @@
 <view class="container">
   <view class="top">
-    <view class="phone">
-      <input bindinput="bindPhoneInputChange" value="{{telephone}}" class="input-title" placeholder="请输入手机号" />
+    <view class="phone item">
+      <input bindinput="bindPhoneInputChange" value="{{telephone}}" class="input-title" placeholder="输入手机号" />
+    </view>
+    <view class="msgcode item">
+      <input bindinput="bindCaptchaChange" class="input-captcha" placeholder="短信验证码" />
+      <view><button disabled='{{disabled}}' class="send-msg-code" data-id="2" bindtap="getVerificationCode">{{time}}</button></view>
+    </view>
+    <view class="captcha item">
+      <input bindinput="bindCaptchaChange" class="input-captcha" placeholder="图片验证码" />
+      <image bindtap="changeCode" src="{{captcha}}" style='height:40px;width:100px;'></image>
     </view>
     <view class="btn-edit" bindtap="editPhone">
       <view class="txt-publish-show">

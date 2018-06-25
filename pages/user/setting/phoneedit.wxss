@@ -1,9 +1,37 @@
 .phone {
-  margin: 10px 0 30px 0;
-  border-bottom: 1px solid #eee;
-  font-size: 16px;
-  color: #444;
+
 }
+.captcha {
+  margin-bottom: 30px;
+}
+
+.msgcode {
+
+}
+
+.item {
+  padding: 0 6px;
+  height: 50px;
+  border-bottom: 1px solid #eee;
+  color: #444;
+  font-size: 14px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.send-msg-code {
+  padding: 0 4px;
+  background-color: #f44242;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 5px;
+  height: 24px;
+  width: 76px;
+  line-height: 24px;
+}
+
 .top {
   padding: 8px 14px;
 }

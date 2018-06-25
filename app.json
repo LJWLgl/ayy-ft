@@ -1,11 +1,14 @@
 {
   "pages":[
     "pages/index/index",    
-    "pages/user/setting/phoneedit",
-    "pages/user/setting/addressedit",   
+    "pages/social/topic/topic", 
+    "pages/social/social",    
+    "pages/personshow/personshow",    
+    "pages/user/setting/phoneedit",    
+    "pages/user/setting/addressedit",
     "pages/user/user",
     "pages/user/setting/about",
-    "pages/depoly/depoly",    
+    "pages/depoly/depoly",
     "pages/depoly/edit-price/edit-price",
     "pages/depoly/edittag/edittag",
     "pages/donation/donation",
@@ -34,8 +37,8 @@
       {
         "iconPath": "image/like.png",
         "selectedIconPath": "image/like-s.png",
-        "pagePath": "pages/donation/donation",
-        "text": "捐赠"
+        "pagePath": "pages/social/social",
+        "text": "社区"
       },
       {
         "iconPath": "image/add.png",

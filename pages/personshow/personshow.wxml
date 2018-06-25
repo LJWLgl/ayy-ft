@@ -1,0 +1,12 @@
+<!--pages/personshow/personshow.wxml-->
+<text>pages/personshow/personshow.wxml</text>
+<view class="tab">
+  <view class="tab-title">
+      <view class="{{selected1?'border-tottom':'default'}}" bindtap="selected1">标题1</view>
+      <view class="{{selected2?'border-tottom':'default'}}" bindtap="selected2">标题2</view>
+  </view>
+  <view class="tab-content">
+      <view class="{{selected1?'show':'hidden'}}">内容1</view>
+      <view class="{{selected2?'show':'hidden'}}">内容2</view>
+  </view>
+</view>

@@ -1,0 +1,21 @@
+<template name="listcomment">
+  <view class="listcomment-area">
+    <block wx:for="{{comments}}" wx:for-index="index">
+      <view class="listcomment-area-item">
+        <view class="listcomment-arem-item-base">
+          <view class="listcomment-item-avatar">
+            <image class="listcomment-item-avatar-image" src="{{item.avatar}}"></image>
+          </view>
+          <view class="listcomment-item-comment-info">
+            <text class="listcomment-username">{{item.username}}</text>
+            <text class="listcomment-desc">{{item.content}}</text>
+            <view class="listcomment-item-date">
+              <text>{{index + 1}}楼 · </text>
+              <text>{{item.date}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</template>

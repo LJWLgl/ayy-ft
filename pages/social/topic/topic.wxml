@@ -1,0 +1,50 @@
+<!--pages/social/topic/topic.wxml-->
+<import src="../../../template/listcomment"/>
+<view class="container">
+  <view class="top">
+    <view class="content">
+      <view class="title">
+        <text>标题</text>
+      </view>
+      <view class="desc">
+        <text>描述</text>
+      </view>
+      <view class="image-list">
+        <view class="image-list-item" wx:for="{{imageList}}" >
+          <image class="image-item" src="{{item.src}}"></image>
+        </view>
+      </view>
+      <view class="publish-info">
+        <text class="publish-info-auther">匿名的小S</text>
+        <text> · </text>
+        <text class="publish-info-date">06-05</text>
+      </view>
+      <view class="other-info">
+        <view class="look-comment-count">
+          <view class="look-count">
+            <text class="small-icon icon-attention-light"></text>
+            <text>100</text>
+          </view>
+          <view class="comment-count">
+            <text class="small-icon icon-comment"></text>
+            <text>99</text>
+          </view>
+        </view>
+        <view class="focuson">
+          <text class="small-icon icon-focuson"></text>
+          <text>关注</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="interval">
+  </view>
+  <view class="middle">
+    <template is="listcomment" data="{{comments}}"/>
+  </view>
+  <view class="topic-publish">
+    <view class="btn-container">
+      <input class="input-topic" placeholder="留下你的评论···"></input>
+    </view>
+  </view>
+</view>

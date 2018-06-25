@@ -1,0 +1,17 @@
+/* pages/personshow/personshow.wxss */
+.tab-title{
+  width:100%;
+  height:50rpx;
+  line-height:50rpx;
+  display:flex;
+  flex-direction: row;
+}
+.tab-title view{
+  flex:auto;
+  text-align:center;
+}
+.border-tottom{
+  border-bottom:1rpx solid red;
+}
+.show{display:block;}
+.hidden{display:none;}
