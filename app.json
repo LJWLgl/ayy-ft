@@ -1,7 +1,8 @@
 {
   "pages":[
+    "pages/social/release/release",    
     "pages/index/index",    
-    "pages/social/topic/topic", 
+    "pages/social/topic/topic",
     "pages/social/social",    
     "pages/personshow/personshow",    
     "pages/user/setting/phoneedit",    

@@ -1,0 +1,25 @@
+/* pages/social/release/release.wxss */
+.bottom-fixed-view {
+  height: 50px;
+  width: 100%;
+}
+.btn-container {
+  height: 50px;
+  width: 100%;
+  background-color: #eee;
+}
+.btn-container {
+  display: flex;
+  flex-flow:row nowrap;
+}
+.btn-left-v {
+  height: 50px;
+  display: flex;
+  flex-flow:column nowrap;
+  justify-content: center;
+}
+
+.btn-left {
+  display: flex;
+  flex-flow:row nowrap;
+}

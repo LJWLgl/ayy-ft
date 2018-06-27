@@ -1,0 +1,27 @@
+<!--pages/social/release/release.wxml-->
+<view class="container">
+  <view class="top">
+    <view class="title">
+      <input class="input-title" placeholder="主题"></input>
+    </view>
+    <view class="content">
+      <input class="input-content" placeholder="内容"></input>
+    </view>
+  </view>
+  <view class="bottom-fixed-view">
+    <view class="btn-container">
+      <view class="btn-left-v">
+        <view class="btn-left">
+          <view class="exit">
+            <text class="middle-icon icon-exit"></text>
+          </view>
+          <view class="deploy-image">
+            <text class="middle-icon icon-picture1"></text>
+          </view>
+        </view>
+        <view class='btn-right'>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

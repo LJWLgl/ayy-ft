@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'iconfont';  /* project id 533421 */
-  src: url('//at.alicdn.com/t/font_533421_91b3cwzf4pn.eot');
-  src: url('//at.alicdn.com/t/font_533421_91b3cwzf4pn.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_533421_91b3cwzf4pn.woff') format('woff'),
-  url('//at.alicdn.com/t/font_533421_91b3cwzf4pn.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_533421_91b3cwzf4pn.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_533421_x2k4khul1tg.eot');
+  src: url('//at.alicdn.com/t/font_533421_x2k4khul1tg.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_533421_x2k4khul1tg.woff') format('woff'),
+  url('//at.alicdn.com/t/font_533421_x2k4khul1tg.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_533421_x2k4khul1tg.svg#iconfont') format('svg');
 }
 
 .small-icon {
@@ -64,3 +64,8 @@
 
 .icon-focuson:after {content: "\e649"}
 
+.icon-exit:after {content: "\e7fe"}
+
+.icon-picture1:after {content: "\e7fc"}
+
+.icon-send:after {content: "\e7fa"}
