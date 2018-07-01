@@ -17,6 +17,7 @@ App({
     domain: {
       // dev: "http://localhost:8081/",
       dev: "https://ganzhiqiang.wang/",
+      qiniuImg: "https://nanxuan.qiniuts.com",
       tencentMap: "",
       imageUpload: "",
     }

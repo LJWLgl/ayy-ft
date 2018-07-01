@@ -1,10 +1,10 @@
 {
   "pages":[
     "pages/index/index",    
+    "pages/personshow/personshow",    
     "pages/social/release/release",    
     "pages/social/topic/topic",
     "pages/social/social",    
-    "pages/personshow/personshow",    
     "pages/user/setting/phoneedit",    
     "pages/user/setting/addressedit",
     "pages/user/user",

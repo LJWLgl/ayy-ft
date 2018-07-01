@@ -1,12 +1,51 @@
 <!--pages/personshow/personshow.wxml-->
-<text>pages/personshow/personshow.wxml</text>
-<view class="tab">
-  <view class="tab-title">
-      <view class="{{selected1?'border-tottom':'default'}}" bindtap="selected1">标题1</view>
-      <view class="{{selected2?'border-tottom':'default'}}" bindtap="selected2">标题2</view>
-  </view>
-  <view class="tab-content">
-      <view class="{{selected1?'show':'hidden'}}">内容1</view>
-      <view class="{{selected2?'show':'hidden'}}">内容2</view>
+<import src="../../template/listview" />
+<import src="../../template/listtalk" />
+
+<view class="container">
+  <view class="top">
+    <view class="user-top">
+      <image class="avatar" src="{{userinfo.avatar}}"></image>
+      <view class="auth-medal">
+        <view class="auth">
+          <text class="middle-icon icon-auth"></text>
+          <text>已实名</text>
+        </view>
+        <view class="medal">
+          <image class="img-medal" src="http://nanxuan.qiniuts.com/icon/medal1.png"></image>
+          <text>9</text>
+        </view>
+      </view>
+      <text class="uname">{{userinfo.username}}</text>
+      <text class="info">{{userinfo.desc}}</text>
+    </view>
+    <view class="tab">
+      <view class="tab-title">
+        <view class="{{selected1?'border-tottom':'default'}}" bindtap="selected1">
+          <view class="tab-title-txt">
+            <text>他的信息</text>
+          </view>
+        </view>
+        <view class="{{selected2?'border-tottom':'default'}}" bindtap="selected2">
+          <view>
+            <text>他的宝贝</text>
+          </view>
+        </view>
+        <view class="{{selected3?'border-tottom':'default'}}" bindtap="selected3">
+          <view>
+            <text>他的话题</text>
+          </view>
+        </view>
+      </view>
+      <view class="tab-content">
+        <view class="{{selected1?'show':'hidden'}}">内容1</view>
+        <view class="{{selected2?'show':'hidden'}}">
+          <template is="listview" data="{{pages}}" />
+        </view>
+        <view class="{{selected3?'show':'hidden'}}">
+          <template is="listtalk" data="{{data}}" />
+        </view>
+      </view>
+    </view>
   </view>
 </view>

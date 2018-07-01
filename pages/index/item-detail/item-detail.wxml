@@ -4,7 +4,7 @@
     <view class="container">
       <view class="top">
         <view class="container-user">
-          <view class='info-container'>
+          <view class='info-container' bindtap='entryPeopleDetail'>
             <image class="avatar" src="{{avatar}}"></image>
           </view>
           <view class="container-user-ext-info">

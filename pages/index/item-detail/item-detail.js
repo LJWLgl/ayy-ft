@@ -42,6 +42,11 @@ Page({
       urls: this.data.imagelist // 需要预览的图片http链接列表  
     })
   },
+  entryPeopleDetail: function(e) {
+     wx.navigateTo({
+       url: '../../personshow/personshow',
+     })
+  },
   sendClick: function (e) {
     var _this = this;
     var app = getApp();

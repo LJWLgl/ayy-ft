@@ -69,3 +69,9 @@
 .icon-picture1:after {content: "\e7fc"}
 
 .icon-send:after {content: "\e7fa"}
+
+.icon-auth:after {content: "\e79c"}
+
+.icon-unauth:after {content: "\e61b"}
+
+.icon-medal:after {content: "\e632"}
