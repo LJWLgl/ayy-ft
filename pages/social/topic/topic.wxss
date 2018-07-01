@@ -48,6 +48,7 @@
 .look-comment-count {
   display: flex;
   flex: row nowrap;
+  color: #888;
 }
 .publish-info {
   font-size: 14px;

@@ -7,10 +7,23 @@
   height: 50px;
   width: 100%;
   background-color: #eee;
-}
-.btn-container {
   display: flex;
-  flex-flow:row nowrap;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.top {
+  padding: 30px 20px 0px 20px;
+}
+.title {
+  padding: 0 0 6px 0;
+}
+.content {
+  padding: 6px 0 0 0;
+  color: #ddd;
+  font-size: 16px;
+}
+.area-content {
+  width: 100%;
 }
 .btn-left-v {
   height: 50px;
@@ -18,8 +31,35 @@
   flex-flow:column nowrap;
   justify-content: center;
 }
-
 .btn-left {
   display: flex;
   flex-flow:row nowrap;
+}
+.btn-right {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+.exit {
+  padding: 0 16px 0 20px;
+}
+.deploy-image {
+  padding: 0 12px 0 12px;
+}
+.icon-send {
+  color: #1296db;
+}
+.send-right {
+  padding: 0 20px 0 0;
+}
+.image-list {
+  display: flex;
+  flex-flow:row nowrap;
+}
+.image-list-item {
+  margin-right: 10px;
+}
+.image-item {
+  width: 60px;
+  height: 80px;
 }

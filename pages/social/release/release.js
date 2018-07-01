@@ -5,7 +5,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    imageList:[
+      {
+        src: "http://nanxuan.qiniuts.com/tmp/wx5a407b64d62a69bc.o6zAJs-yD4_VkBfMkhr2pUTWHH8c.0663a7bea52a1c76270493ca69fe5ea2.jpg"
+      },
+      {
+        src: "http://nanxuan.qiniuts.com/tmp/wx5a407b64d62a69bc.o6zAJs-yD4_VkBfMkhr2pUTWHH8c.0663a7bea52a1c76270493ca69fe5ea2.jpg"
+      }
+    ]
   },
 
   /**

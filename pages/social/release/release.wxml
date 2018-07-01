@@ -2,10 +2,15 @@
 <view class="container">
   <view class="top">
     <view class="title">
-      <input class="input-title" placeholder="主题"></input>
+      <input class="input-title" placeholder-style="color:#eed" placeholder="主题"></input>
     </view>
     <view class="content">
-      <input class="input-content" placeholder="内容"></input>
+      <textarea class="area-content" placeholder-style="color:#eee" placeholder="内容"></textarea>
+    </view>
+    <view class="image-list">
+      <view class="image-list-item" wx:for="{{imageList}}">
+        <image class="image-item" src="{{item.src}}"></image>
+      </view>
     </view>
   </view>
   <view class="bottom-fixed-view">
@@ -19,7 +24,10 @@
             <text class="middle-icon icon-picture1"></text>
           </view>
         </view>
-        <view class='btn-right'>
+      </view>
+      <view class="btn-right">
+        <view class="send-right">
+          <text class="big-icon icon-send"></text>
         </view>
       </view>
     </view>

@@ -5,7 +5,7 @@
   <view class="social-publish-view">
     <view class="btn-container">
       <view class="social-publish-content">
-        <view class="social-publish-div">
+        <view bindtap="publishTopic" class="social-publish-div">
           <view class="social-publish-icon">
             <text class="middle-icon icon-write"></text>
           </view>
