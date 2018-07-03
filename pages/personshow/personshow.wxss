@@ -53,3 +53,9 @@
 }
 .show{display:block;}
 .hidden{display:none;}
+
+.item-info {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}

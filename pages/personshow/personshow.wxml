@@ -38,7 +38,30 @@
         </view>
       </view>
       <view class="tab-content">
-        <view class="{{selected1?'show':'hidden'}}">内容1</view>
+        <view class="{{selected1?'show':'hidden'}}">
+          <view class="item-info">
+            <view class="item-info-desc">
+              <text>标签</text>
+            </view>
+            <view class="item-info-content">
+            </view>
+          </view>
+          <view class="item-info">
+            <view class="item-info-desc">
+              <text>标签</text>
+            </view>
+            <view class="item-info-content">
+              <text>描述</text>
+            </view>
+          </view>
+          <view class="item-info">
+            <view class="item-info-desc">
+              <text>标签</text>
+            </view>
+            <view class="item-info-content">
+            </view>
+          </view>
+        </view>
         <view class="{{selected2?'show':'hidden'}}">
           <template is="listview" data="{{pages}}" />
         </view>
