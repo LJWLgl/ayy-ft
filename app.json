@@ -1,7 +1,7 @@
 {
   "pages":[
+    "pages/index/index",
     "pages/personshow/personshow",    
-    "pages/index/index",    
     "pages/social/release/release",    
     "pages/social/topic/topic",
     "pages/social/social",    
@@ -36,8 +36,8 @@
         "text": "好货"
       },
       {
-        "iconPath": "image/like.png",
-        "selectedIconPath": "image/like-s.png",
+        "iconPath": "image/social.png",
+        "selectedIconPath": "image/social-s.png",
         "pagePath": "pages/social/social",
         "text": "社区"
       },

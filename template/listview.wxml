@@ -36,7 +36,6 @@
           </view>
         </navigator>
       </block>
-      <template is="nodata" />
     </view>
   </view>
 </template>

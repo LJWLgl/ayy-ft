@@ -35,6 +35,7 @@ Page({
   },
   searchClick: function(event) {
     this.setData({
+      start: 0,
       text_msg:"搜索结果"
     })
     this.searchGoods(event.detail.value)

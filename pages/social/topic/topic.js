@@ -5,6 +5,14 @@ Page({
    * 页面的初始数据
    */
   data: {
+    topic:{
+        talkId: 1,
+        title: '求购这样一本高数考研试卷',
+        publisher: '吕小布',
+        desc: '着急感谢',
+        lookCount: 78,
+        commentCount: 3,
+      },
     imageList:[
       {
         src:"http://nanxuan.qiniuts.com/UI-design-1.jpeg"
@@ -17,30 +25,6 @@ Page({
       {
         avatar: "https://wx.qlogo.cn/mmopen/vi_32/rV89A0mRdWSeWIDmPTPUcdicbupBhLTbbLvWIxplFs2CpHa2Fr1iaq9OWe1SA001RIVUhTbwA7HUCFoOaujOlv1w/0",
         username:"篮球王子",
-        content: "我这里有一个",
-        date: "06-05"
-      },
-      {
-        avatar: "https://wx.qlogo.cn/mmopen/vi_32/rV89A0mRdWSeWIDmPTPUcdicbupBhLTbbLvWIxplFs2CpHa2Fr1iaq9OWe1SA001RIVUhTbwA7HUCFoOaujOlv1w/0",
-        username: "篮球王子",
-        content: "我这里有一个",
-        date: "06-05"
-      },
-      {
-        avatar: "https://wx.qlogo.cn/mmopen/vi_32/rV89A0mRdWSeWIDmPTPUcdicbupBhLTbbLvWIxplFs2CpHa2Fr1iaq9OWe1SA001RIVUhTbwA7HUCFoOaujOlv1w/0",
-        username: "篮球王子",
-        content: "我这里有一个",
-        date: "06-05"
-      },
-      {
-        avatar: "https://wx.qlogo.cn/mmopen/vi_32/rV89A0mRdWSeWIDmPTPUcdicbupBhLTbbLvWIxplFs2CpHa2Fr1iaq9OWe1SA001RIVUhTbwA7HUCFoOaujOlv1w/0",
-        username: "篮球王子",
-        content: "我这里有一个",
-        date: "06-05"
-      },
-      {
-        avatar: "https://wx.qlogo.cn/mmopen/vi_32/rV89A0mRdWSeWIDmPTPUcdicbupBhLTbbLvWIxplFs2CpHa2Fr1iaq9OWe1SA001RIVUhTbwA7HUCFoOaujOlv1w/0",
-        username: "篮球王子",
         content: "我这里有一个",
         date: "06-05"
       }

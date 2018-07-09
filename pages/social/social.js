@@ -8,44 +8,12 @@ Page({
     data:[
       {
         talkId:1,
-        lookCount:4343,
-        commentCount:555
+        title:'求购这样一本高数考研试卷',
+        publisher: '吕小布',
+        desc: '着急感谢',
+        lookCount:78,
+        commentCount:3,
       },
-      {
-        talkId:2,
-        lookCount: 54,
-        commentCount: 6
-      },
-      {
-        talkId: 1,
-        lookCount: 4343,
-        commentCount: 555
-      },
-      {
-        talkId: 2,
-        lookCount: 54,
-        commentCount: 6
-      },
-      {
-        talkId: 1,
-        lookCount: 4343,
-        commentCount: 555
-      },
-      {
-        talkId: 2,
-        lookCount: 54,
-        commentCount: 6
-      },
-      {
-        talkId: 1,
-        lookCount: 4343,
-        commentCount: 555
-      },
-      {
-        talkId: 2,
-        lookCount: 54,
-        commentCount: 767
-      }
     ]
   },
   onLoad: function (options) {

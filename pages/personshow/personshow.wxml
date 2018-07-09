@@ -48,17 +48,26 @@
           </view>
           <view class="item-info">
             <view class="item-info-desc">
-              <text>标签</text>
+              <text>手机号</text>
             </view>
             <view class="item-info-content">
-              <text>描述</text>
+              <text>177****2115</text>
             </view>
           </view>
           <view class="item-info">
             <view class="item-info-desc">
-              <text>标签</text>
+              <text>微信号</text>
             </view>
-            <view class="item-info-content">
+            <view class="item-info-content">  
+              <text>gzq282828</text>
+            </view>
+          </view>
+          <view class="item-info">
+            <view class="item-info-desc">
+              <text>收货地址</text>
+            </view>
+            <view class="item-info-content">  
+              <text>上海市长宁区凌空SOHO15栋</text>
             </view>
           </view>
         </view>

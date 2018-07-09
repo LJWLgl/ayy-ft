@@ -1,33 +1,34 @@
 <template name="listtalk">
   <view class="talk-list-view">
+    <view class="talk-item-interval"></view>
     <block wx:for-items="{{data}}" wx:for-item="item" wx:key="*item">
-    <navigator url="/pages/social/topic/topic?topic_id={{item.talkId}}" class="talk-list-item">
-      <view class="talk-item-interval"></view>
-      <view class="talk-item-content">
-        <view class="talk-item-title">
-        <view>标题</view>
-      </view>
-      <view class="talk-item-desc">
-        <text class="talk-item-desc-txt">描述</text>
-        <text class="middle-icon icon-picture"></text>
-      </view>
-      <view class="talk-item-bottom flex-row">
-        <view class="talk-item-nickname">
-          <text>吕小布</text>
-        </view>
-        <view class="talk-item-count">
-          <view class="talk-item-look-count flex-row">
-            <text class="small-icon icon-attention-light"></text>
-            <text>{{item.lookCount}}</text>
+      <navigator url="/pages/social/topic/topic?topic_id={{item.talkId}}" class="talk-list-item">
+        <view class="talk-item-content">
+          <view class="talk-item-title">
+            <view>{{item.title}}</view>
           </view>
-          <view class="talk-item-comment-count flex-row">
-            <text class="small-icon icon-comment"></text>
-            <text>{{item.commentCount}}</text>
+          <view class="talk-item-desc">
+            <text class="talk-item-desc-txt">{{item.desc}}</text>
+            <text class="middle-icon icon-picture"></text>
+          </view>
+          <view class="talk-item-bottom flex-row">
+            <view class="talk-item-nickname">
+              <text>{{item.publisher}}</text>
+            </view>
+            <view class="talk-item-count">
+              <view class="talk-item-look-count flex-row">
+                <text class="small-icon icon-attention-light"></text>
+                <text>{{item.lookCount}}</text>
+              </view>
+              <view class="talk-item-comment-count flex-row">
+                <text class="small-icon icon-comment"></text>
+                <text>{{item.commentCount}}</text>
+              </view>
+            </view>
           </view>
         </view>
-      </view>
-      </view>
-    </navigator>
+        <view class="talk-item-interval"></view>
+      </navigator>
     </block>
   </view>
 </template>

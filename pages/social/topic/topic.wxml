@@ -4,10 +4,10 @@
   <view class="top">
     <view class="content">
       <view class="title">
-        <text>标题</text>
+        <text>{{topic.title}}</text>
       </view>
       <view class="desc">
-        <text>描述</text>
+        <text>{{topic.desc}}</text>
       </view>
       <view class="image-list">
         <view class="image-list-item" wx:for="{{imageList}}" >
@@ -15,7 +15,7 @@
         </view>
       </view>
       <view class="publish-info">
-        <text class="publish-info-auther">匿名的小S</text>
+        <text class="publish-info-auther">{{topic.pulisher}}</text>
         <text> · </text>
         <text class="publish-info-date">06-05</text>
       </view>
@@ -23,11 +23,11 @@
         <view class="look-comment-count">
           <view class="look-count">
             <text class="small-icon icon-attention-light"></text>
-            <text>100</text>
+            <text>{{topic.lookCount}}</text>
           </view>
           <view class="comment-count">
             <text class="small-icon icon-comment"></text>
-            <text>99</text>
+            <text>{{topic.commentCount}}</text>
           </view>
         </view>
         <view class="focuson">

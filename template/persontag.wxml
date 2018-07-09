@@ -1,0 +1,5 @@
+<template name="tag">
+  <view class="persontag-view">
+    <text>这是标签</text>
+  </view>
+</template>

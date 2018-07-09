@@ -43,6 +43,8 @@
   line-height:50px;
   display:flex;
   flex-direction: row;
+  color: #888;
+  font-size: 16px;
 }
 .tab-title view{
   flex:auto;
@@ -53,9 +55,19 @@
 }
 .show{display:block;}
 .hidden{display:none;}
-
+.tab-content {
+  color: #888;
+}
 .item-info {
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
+  font-size: 16px;
+  color: #888;
+  padding: 12px 8px 12px 12px;
+}
+.item-info-desc {
+  color: #444;
+  flex: 1;
+}
+.item-info-content {
+  flex: 3;
 }
