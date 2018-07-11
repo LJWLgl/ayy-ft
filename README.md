@@ -10,10 +10,10 @@
 + ...
 
 ### 效果图如下
-![image](http://nanxuan.qiniuts.com/xgt-4.png)
-![image](http://nanxuan.qiniuts.com/xgt-2.png)
-![image](http://nanxuan.qiniuts.com/xgt-3.png)
-![image](http://nanxuan.qiniuts.com/xgt-1.png)
+![image](http://nanxuan.qiniuts.com/xgt-4.png?imageView2/2/w/300/q/100)
+![image](http://nanxuan.qiniuts.com/xgt-2.png?imageView2/2/w/300/q/100)
+![image](http://nanxuan.qiniuts.com/xgt-3.png?imageView2/2/w/300/q/100)
+![image](http://nanxuan.qiniuts.com/xgt-1.png?imageView2/2/w/300/q/100)
 
 ### 更新
 
