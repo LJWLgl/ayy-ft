@@ -21,7 +21,7 @@ Page({
     var app = getApp();    
     this.setData({
       telephone: app.globalData.userInfo.telephone,
-      captcha: 'http://nanxuan.duitang.net:8081' + '/people/captcha/?uid=' + app.globalData.userInfo.userId + '&' + Math.random()
+      captcha: app.globalData.domain.dev + '/people/captcha/?uid=' + app.globalData.userInfo.userId + '&' + Math.random()
     })
   },
   bindPhoneInputChange: function(e) {
@@ -31,7 +31,7 @@ Page({
   },
   changeCode: function(e) {
     var app = getApp();
-    var captchaUrl = 'http://nanxuan.duitang.net:8081' + '/people/captcha/?uid=' + app.globalData.userInfo.userId + '&' + Math.random();
+    var captchaUrl = app.globalData.domain.dev + '/people/captcha/?uid=' + app.globalData.userInfo.userId + '&' + Math.random();
     console.log(captchaUrl);
     this.setData({
       captcha: captchaUrl
@@ -49,7 +49,7 @@ Page({
         clearInterval(interval)
         that.setData({
           time: '重新发送',
-          currentTime: 5,
+          currentTime: 60,
           disabled: false
         })
       }
@@ -63,7 +63,7 @@ Page({
       disabled: true
     })
     wx.request({
-      url: 'http://nanxuan.duitang.net:8081' + '/people/msg/send/',
+      url: app.globalData.domain.dev + '/people/msg/send/',
       method: 'GET',
       data: {
         uid: app.globalData.userInfo.userId,

@@ -3,11 +3,12 @@ const qiniuUploader = require("../../utils/qiniuUploader");
 
 // 初始化七牛相关参数
 function initQiniu() {
+  var app = getApp()
   var options = {
     region: 'ECN', // 华北区
-    uptokenURL: 'https://ganzhiqiang.wang/goods/image/uptoken',
+    uptokenURL: app.globalData.domain.dev +'/goods/image/uptoken',
     // uptoken: 'qVwP0HV-VC7jGGmREBUZwgKrdJNs9ib5_rA-6OSs:nEn4E36d7z8dmk9qjpdNyoIk5qg=:eyJzY29wZSI6ImF5eS1maWxlIiwiZGVhZGxpbmUiOjE1MTQwMjUyMzl9',
-    domain: 'http://ozautirlw.bkt.clouddn.com',
+    domain: app.globalData.domain.qiniuImg,
     shouldUseQiniuFileName: false
   };
   qiniuUploader.init(options);
