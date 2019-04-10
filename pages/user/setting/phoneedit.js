@@ -11,7 +11,7 @@ Page({
     date: '请选择日期',
     fun_id: 2,
     time: '获取验证码', //倒计时 
-    currentTime: 5
+    currentTime: 60
   },
 
   /**

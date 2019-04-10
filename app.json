@@ -55,5 +55,10 @@
       }
     ]
   },
-  "debug": true
+  "debug": true,
+  "permission": {
+    "scope.userLocation": {
+      "desc": "爱易园将自动获取您的位置信息，方便商品发布"
+    }
+  }
 }

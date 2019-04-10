@@ -241,6 +241,9 @@ Page({
         var _data = res.data.data;
         console.log(res)
         var _commment = [];
+        if (_data == null || _data.length == null) {
+          return;
+        }
         for (var i=0; i < _data.length; i++) {
           _commment.push({
             avatar: _data[i].user_base.avatar,

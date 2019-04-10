@@ -1,8 +1,8 @@
 <view class="container">
   <view class="top">
-    <image class ="avator" src="http://nanxuan.qiniuts.com/ayy-logo.png"></image>
-    <text class="version-txt">版本号：2.0.1</text>
-    <text class="version-txt">产品：李利利  | 开发：甘志强</text>
+    <image class ="avator" src="http://ayy.ganzhiqiang.wang/ayy-logo.png"></image>
+    <text class="version-txt">版本号：2.1.0</text>
+    <text class="version-txt">产品&测试：李利利  | 开发：甘志强</text>
     <text class="desc-txt">爱易园是一个为学生服务的校园二手交易平台，在这里，你总是可以淘到你想要的</text>
   </view>
 </view>

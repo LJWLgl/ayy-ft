@@ -3,6 +3,17 @@
   padding-bottom: 60px;
 }
 
+.top {
+  width: 100%;
+}
+
+.btn-getinfo {
+  border-radius: 20px;
+  background-color:  #eee; 
+  color: #444;
+  font-size: 16px;
+}
+
 .user-top {
   height: 200px;
   width: 100%;

@@ -1,21 +1,67 @@
+const util = require('../../utils/util.js')
+
 Page({
-  onShow: function () {
-    this.userDetail()
-    this.querySchool()
+  onShow: function() {
+    if (!util.checkLogin()) {
+      console.log("未登录。。。")
+      this.setData({
+        isLogin: false
+      });
+    } else {
+      this.userDetail()
+      this.querySchool()
+      this.setData({
+        isLogin: true
+      });
+    }
   },
   data: {
     index: 0,
     schools: [],
     userinfo: {
-      username:"",
-      avatar:"",
-      desc:""
+      username: "",
+      avatar: "",
+      desc: ""
     },
-    favoriteCount:0,
-    integral:0,
-    likeCount:0,
-    lookCount:0,
-    publishCount:0
+    favoriteCount: 0,
+    integral: 0,
+    likeCount: 0,
+    lookCount: 0,
+    publishCount: 0,
+    isLogin: false
+  },
+  getWxUserInfo: function(e) {
+    console.log(e.detail.rawData)
+    var app = getApp();
+    var _that = this;
+    wx.request({
+      url: app.globalData.domain.dev + 'people/registerinfo/',
+      method: 'GET',
+      // dataType: 'json',
+      data: {
+        uid: app.globalData.userInfo.userId,
+        userInfo: e.detail.rawData
+      },
+      success: function(res) {
+        console.log(res);
+        var _user = JSON.parse(e.detail.rawData)
+        if (_user) {
+          // 设置本地缓存，获取用户信息成功
+          util.getUserInfoOk();
+        }
+        app.globalData.userInfo.nickname = _user.nickName;
+        app.globalData.userInfo.avatar = _user.avatarUrl;
+        app.globalData.userInfo.location = _user.address;
+        _that.setData({
+          isLogin: true,
+          userinfo: {
+            username: _user.nickName,
+            avatar: _user.avatarUrl,
+            desc: "介绍一下自己吧",
+          }
+        })
+      }
+    });
   },
   jumpToSetting: function(e) {
     wx.navigateTo({
@@ -33,7 +79,7 @@ Page({
     });
     this.changeSchool()
   },
-  changeSchool: function (e) {
+  changeSchool: function(e) {
     var _that = this;
     var app = getApp();
     wx.request({
@@ -43,7 +89,7 @@ Page({
         uid: app.globalData.userInfo.userId,
         index: _that.data.index
       },
-      success: function (res) {
+      success: function(res) {
         if (res.data.status != 1) {
           wx.showToast({
             title: res.data.message,
@@ -60,7 +106,7 @@ Page({
     wx.request({
       url: app.globalData.domain.dev + 'people/school/query/',
       method: 'GET',
-      data:{},
+      data: {},
       success: function(res) {
         if (res.data.status != 1) {
           wx.showToast({
@@ -70,7 +116,7 @@ Page({
           return;
         }
         _that.setData({
-          schools:res.data.data
+          schools: res.data.data
         })
       }
     })
@@ -102,10 +148,10 @@ Page({
         app.globalData.userInfo.shipAddress = data.ship_address;
         console.log(data)
         _that.setData({
-          userinfo:{
-            username: data.user_base.nickname,
-            avatar: data.user_base.avatar,
-            desc: "86版《西游记》绝对是那代人的国民记忆，放假天天等着看，一遍又一遍，悟空被压在五指山下经历春夏秋冬"
+          userinfo: {
+            username: app.globalData.userInfo.nickname,
+            avatar: app.globalData.userInfo.avatar,
+            desc: "介绍一下自己吧"
           },
           index: data.school,
           favoriteCount: data.favorite_count,

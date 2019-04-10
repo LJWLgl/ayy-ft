@@ -1,8 +1,19 @@
 <view class="container">
-  <view class="user-top">
-    <image class="avatar" src="{{userinfo.avatar}}"></image>
-    <text class="uname">{{userinfo.username}}</text>
-    <text class="info">{{userinfo.desc}}</text>
+  <view class='top'>
+    <view wx:if="{{isLogin}}">
+      <view class='user-top'>
+        <image class="avatar" src="{{userinfo.avatar}}"></image>
+        <text class="uname">{{userinfo.username}}</text>
+        <text class="info">{{userinfo.desc}}</text>
+      </view>
+    </view>
+    <view wx:else>
+      <view class='user-top'>
+        <button class='btn-getinfo' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="getWxUserInfo">
+          获取头像及昵称
+        </button>
+      </view>
+    </view>
   </view>
   <view class="middle">
     <view class="person-list">
@@ -36,8 +47,12 @@
           <view class="my-icon icon-rignt-after middle-icon">{{schools[index]}}</view>
         </picker>
       </view>
-      <view class="my-view-info border-none" bindtap="jumpToSetting">
+      <view class="my-view-info" bindtap="jumpToSetting">
         <view class="my-txt-desc">设置</view>
+        <view class="my-icon icon-rignt middle-icon"></view>
+      </view>
+      <view class="my-view-info border-none" bindtap="jumpToSetting">
+        <view class="my-txt-desc">赞赏支持</view>
         <view class="my-icon icon-rignt middle-icon"></view>
       </view>
     </view>
