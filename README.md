@@ -10,11 +10,14 @@
 + ...
 
 ### 效果图如下
-![image](http://nanxuan.qiniuts.com/xgt-4.png?imageView2/2/w/300/q/100)
-![image](http://nanxuan.qiniuts.com/xgt-2.png?imageView2/2/w/300/q/100)
-![image](http://nanxuan.qiniuts.com/xgt-3.png?imageView2/2/w/300/q/100)
-![image](http://nanxuan.qiniuts.com/xgt-1.png?imageView2/2/w/300/q/100)
+![image](http://ayy.ganzhiqiang.wang/xgt-4.png?imageView2/2/w/300/q/100)
+![image](http://ayy.ganzhiqiang.wang/xgt-2.png?imageView2/2/w/300/q/100)
+![image](http://ayy.ganzhiqiang.wang/xgt-3.png?imageView2/2/w/300/q/100)
+![image](http://ayy.ganzhiqiang.wang/xgt-1.png?imageView2/2/w/300/q/100)
 
 ### 更新
 
-#### 2018.07.11
+#### 2019.03.26
+- 解决微信getUserInfo策略更新而不能登录问题
+- war包用docker部署
+

@@ -15,8 +15,8 @@ App({
       shipAddress: "",
     },
     domain: {
-      dev: "http://localhost:8081/",
-      // dev: "https://ganzhiqiang.wang/ares/",
+      // dev: "http://localhost:8081/",
+      dev: "https://ganzhiqiang.wang/ares/",
       qiniuImg: "http://ayy.ganzhiqiang.wang",
       tencentMap: "",
       imageUpload: "",
